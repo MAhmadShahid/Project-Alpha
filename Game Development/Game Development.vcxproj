@@ -71,21 +71,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(SolutionDir)Dependancies\freeglut\include;$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)Dependancies\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(SolutionDir)Dependancies\freeglut\lib\$(Platform);$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\lib-vc2022\$(Platform);$(SolutionDir)Dependancies\glew-2.1.0\lib\Release\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(SolutionDir)Dependancies\freeglut\include;$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)Dependancies\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(SolutionDir)Dependancies\freeglut\lib\$(Platform);$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\lib-vc2022\$(Platform);$(SolutionDir)Dependancies\glew-2.1.0\lib\Release\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(SolutionDir)Dependancies\freeglut\include;$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)Dependancies\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(SolutionDir)Dependancies\freeglut\lib\$(Platform);$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\lib-vc2022\$(Platform);$(SolutionDir)Dependancies\glew-2.1.0\lib\Release\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(SolutionDir)Dependancies\freeglut\include;$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\include;$(SolutionDir)Dependancies\glew-2.1.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(SolutionDir)Dependancies\freeglut\lib\$(Platform);$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\lib-vc2022\$(Platform);$(SolutionDir)Dependancies\glew-2.1.0\lib\Release\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -99,13 +99,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>freeglut.lib;glfw3.lib;Opengl32.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;glew32.lib;glew32s.lib;glu32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\freeglut\bin\$(Platform)\freeglut.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\bin\$(Platform)\glfw3.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" "$(OutDir)"</Command>
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -123,13 +122,12 @@ copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" 
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>freeglut.lib;glfw3.lib;Opengl32.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;glew32.lib;glew32s.lib;glu32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\freeglut\bin\$(Platform)\freeglut.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\bin\$(Platform)\glfw3.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" "$(OutDir)"</Command>
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -143,13 +141,12 @@ copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" 
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>freeglut.lib;glfw3.lib;Opengl32.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;glew32.lib;glew32s.lib;glu32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\freeglut\bin\$(Platform)\freeglut.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\bin\$(Platform)\glfw3.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" "$(OutDir)"</Command>
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -167,13 +164,12 @@ copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" 
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>freeglut.lib;glfw3.lib;Opengl32.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib;glew32.lib;glew32s.lib;glu32.lib;SDL2.lib;SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\freeglut\bin\$(Platform)\freeglut.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glfw-3.3.8.bin.WIN64\bin\$(Platform)\glfw3.dll" "$(OutDir)"
-copy "$(SolutionDir)Dependancies\glew-2.1.0\bin\Release\$(Platform)\glew32.dll" "$(OutDir)"</Command>
+</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
