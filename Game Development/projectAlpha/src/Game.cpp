@@ -55,12 +55,22 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 	SDL_QueryTexture(texture, NULL, NULL, &sourceRectangle.w, &sourceRectangle.h);
 
-	destinationRectangle.x = sourceRectangle.x = 0;
-	destinationRectangle.y = sourceRectangle.y = 0;
+	int windowWidth = 0;
+	int windowHieght = 0;
+
+	SDL_GetWindowSize(window, &windowWidth, &windowHieght);
+
+	sourceRectangle.x = 0;
+	sourceRectangle.y = 0;
+	
+	destinationRectangle.x = windowWidth/2 - sourceRectangle.w/2;
+	destinationRectangle.y = windowHieght / 2 - sourceRectangle.h/2;
+	
 	destinationRectangle.w = sourceRectangle.w;
 	destinationRectangle.h = sourceRectangle.h;
 
 	std::cout << std::endl << "Length: " << sourceRectangle.w << std::endl << "Hieght: " << sourceRectangle.h;
+	std::cout << std::endl << "X: " << destinationRectangle.x << std::endl << "Y: " << destinationRectangle.y;
 
 	gameRunning = true;
 	return true;
