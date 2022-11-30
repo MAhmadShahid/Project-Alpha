@@ -181,7 +181,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp" />
-    <Image Include="projectAlpha\Assets\ghostRightFace.bmp" />
+    <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp" />
+    <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp" />
+    <Image Include="projectAlpha\src\Assets\spriteSheet.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

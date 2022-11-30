@@ -10,7 +10,7 @@ int main(int argc, char* args[])
 
 	Game* myGame = new Game();
 
-	myGame->init("Class Setup", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 500, 500, SDL_WINDOW_SHOWN);
+	myGame->init("Class Setup", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 720, SDL_WINDOW_SHOWN);
 
 	while (myGame->running())
 	{

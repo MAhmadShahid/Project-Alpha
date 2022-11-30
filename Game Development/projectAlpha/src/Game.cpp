@@ -40,9 +40,15 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 
+	//getting the window's size
+	int windowWidth = 0;
+	int windowHieght = 0;
+
+	SDL_GetWindowSize(window, &windowWidth, &windowHieght);
+
 	//texture loading
 	const char* spritePath = "C:/Users/ahmad/source/repos/Game Development/Game Development/projectAlpha/src/ghostRight.bmp";
-	SDL_Surface* tempSurface = SDL_LoadBMP("projectAlpha/Assets/ghostRightFace.bmp");
+	SDL_Surface* tempSurface = SDL_LoadBMP("projectAlpha/src/Assets/chemicalExplosion.bmp");
 
 	if (tempSurface == NULL)
 	{
@@ -53,23 +59,23 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 	texture = SDL_CreateTextureFromSurface(renderer	, tempSurface);
 	SDL_FreeSurface(tempSurface);
 
-	SDL_QueryTexture(texture, NULL, NULL, &sourceRectangle.w, &sourceRectangle.h);
+	int imageWidth = 0;
+	int imageHieght = 0;
 
-	int windowWidth = 0;
-	int windowHieght = 0;
-
-	SDL_GetWindowSize(window, &windowWidth, &windowHieght);
+	SDL_QueryTexture(texture, NULL, NULL, &imageWidth, &imageHieght);
 
 	sourceRectangle.x = 0;
 	sourceRectangle.y = 0;
+	sourceRectangle.w = 1500;
+	sourceRectangle.h = imageHieght;
 	
-	destinationRectangle.x = windowWidth/2 - sourceRectangle.w/2;
-	destinationRectangle.y = windowHieght / 2 - sourceRectangle.h/2;
+	destinationRectangle.x = 0;
+	destinationRectangle.y = 0;
 	
-	destinationRectangle.w = sourceRectangle.w;
-	destinationRectangle.h = sourceRectangle.h;
+	destinationRectangle.w = 150; // 8000
+	destinationRectangle.h = 250; // 2131
 
-	std::cout << std::endl << "Length: " << sourceRectangle.w << std::endl << "Hieght: " << sourceRectangle.h;
+	std::cout << std::endl << "Length: " << imageWidth << std::endl << "Hieght: " << imageHieght;
 	std::cout << std::endl << "X: " << destinationRectangle.x << std::endl << "Y: " << destinationRectangle.y;
 
 	gameRunning = true;
@@ -96,7 +102,10 @@ void Game::handleEvents()
 	}
 }
 
-void Game::update() {}
+void Game::update() 
+{
+	sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);
+}
 
 void Game::render()
 {

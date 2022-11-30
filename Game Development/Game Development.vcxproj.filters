@@ -31,7 +31,13 @@
     <Image Include="projectAlpha\Assets\ghostRight.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\Assets\ghostRightFace.bmp">
+    <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\src\Assets\spriteSheet.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
