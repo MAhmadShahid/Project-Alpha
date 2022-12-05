@@ -1,6 +1,7 @@
 #include "Game.h"
 #include "SDL.h"
 #include "iostream"
+#include "SDL_image.h"
 
 Game::Game()
 {
@@ -48,7 +49,7 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 	//texture loading
 	const char* spritePath = "C:/Users/ahmad/source/repos/Game Development/Game Development/projectAlpha/src/ghostRight.bmp";
-	SDL_Surface* tempSurface = SDL_LoadBMP("projectAlpha/src/Assets/chemicalExplosion.bmp");
+	SDL_Surface* tempSurface = IMG_Load("projectAlpha/src/Assets/player.png");
 
 	if (tempSurface == NULL)
 	{
@@ -66,16 +67,16 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 	sourceRectangle.x = 0;
 	sourceRectangle.y = 0;
-	sourceRectangle.w = 1500;
-	sourceRectangle.h = imageHieght;
+	sourceRectangle.w = imageWidth / 6;
+	sourceRectangle.h = imageHieght / 10;
 	
 	destinationRectangle.x = 0;
 	destinationRectangle.y = 0;
 	
-	destinationRectangle.w = 150; // 8000
-	destinationRectangle.h = 250; // 2131
+	destinationRectangle.w = 50; // 8000
+	destinationRectangle.h = 50; // 2131
 
-	std::cout << std::endl << "Length: " << imageWidth << std::endl << "Hieght: " << imageHieght;
+	std::cout << std::endl << "Image Length: " << imageWidth << std::endl << "Image Hieght: " << imageHieght;
 	std::cout << std::endl << "X: " << destinationRectangle.x << std::endl << "Y: " << destinationRectangle.y;
 
 	gameRunning = true;
@@ -104,7 +105,7 @@ void Game::handleEvents()
 
 void Game::update() 
 {
-	sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);
+	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/
 }
 
 void Game::render()

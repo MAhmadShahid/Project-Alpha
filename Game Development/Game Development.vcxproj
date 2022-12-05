@@ -71,21 +71,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\include;$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform);$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\include;$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform);$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\include;$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform);$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\include;$(SolutionDir)Dependancies\SDL2-2.24.2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform);$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform);$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -99,11 +99,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2_image.lib;SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
+      <Command>copy "$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform)\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -122,11 +123,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2_image.lib;SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
+      <Command>copy "$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform)\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -141,11 +143,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2_image.lib;SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
+      <Command>copy "$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform)\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -164,11 +167,12 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2_image.lib;SDL2.lib; SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
+      <Command>copy "$(SolutionDir)Dependancies\SDL2_image-2.6.2\lib\$(Platform)\SDL2_image.dll" "$(OutDir)"
+copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -183,6 +187,7 @@
     <Image Include="projectAlpha\Assets\ghostRight.bmp" />
     <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp" />
     <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp" />
+    <Image Include="projectAlpha\src\Assets\player.png" />
     <Image Include="projectAlpha\src\Assets\spriteSheet.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
