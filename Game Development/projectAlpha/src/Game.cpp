@@ -1,7 +1,7 @@
 #include "Game.h"
-#include "SDL.h"
-#include "iostream"
-#include "SDL_image.h"
+#include <SDL.h>
+#include <iostream>
+#include <SDL_image.h>
 
 Game::Game()
 {
@@ -47,38 +47,13 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 	SDL_GetWindowSize(window, &windowWidth, &windowHieght);
 
-	//texture loading
-	const char* spritePath = "C:/Users/ahmad/source/repos/Game Development/Game Development/projectAlpha/src/ghostRight.bmp";
-	SDL_Surface* tempSurface = IMG_Load("projectAlpha/src/Assets/player.png");
-
-	if (tempSurface == NULL)
-	{
-		std::cout << "Surface returned = Null" << std::endl;
-		printf("Image: %s\nError: %s", spritePath, SDL_GetError());		
-	}
-
-	texture = SDL_CreateTextureFromSurface(renderer	, tempSurface);
-	SDL_FreeSurface(tempSurface);
-
-	int imageWidth = 0;
-	int imageHieght = 0;
-
-	SDL_QueryTexture(texture, NULL, NULL, &imageWidth, &imageHieght);
-
-	sourceRectangle.x = 0;
-	sourceRectangle.y = 0;
-	sourceRectangle.w = imageWidth / 6;
-	sourceRectangle.h = imageHieght / 10;
+	bool loaded = textureManager.load("projectAlpha/src/Assets/player.png", "player", renderer);
 	
-	destinationRectangle.x = 0;
-	destinationRectangle.y = 0;
+	if (!loaded)
+		std::cout << "Image Not Loaded";
 	
-	destinationRectangle.w = 50; // 8000
-	destinationRectangle.h = 50; // 2131
 
-	std::cout << std::endl << "Image Length: " << imageWidth << std::endl << "Image Hieght: " << imageHieght;
-	std::cout << std::endl << "X: " << destinationRectangle.x << std::endl << "Y: " << destinationRectangle.y;
-
+	
 	gameRunning = true;
 	return true;
 
@@ -105,7 +80,7 @@ void Game::handleEvents()
 
 void Game::update() 
 {
-	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/
+	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/	
 }
 
 void Game::render()
@@ -116,7 +91,8 @@ void Game::render()
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	// clear the window to black
 	SDL_RenderClear(renderer);// Clear the current rendering target with the drawing color.
-	SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);
+	//SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);
+	textureManager.draw("player", 0, 0, 48, 48, renderer);
 	// show the window
 	SDL_RenderPresent(renderer); // Update the screen with any rendering performed since the previous call.
 }

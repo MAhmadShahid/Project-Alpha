@@ -2,7 +2,8 @@
 #ifndef __Game__
 #define __Game__
 
-#include "SDL.h"
+#include <SDL.h>
+#include "TextureManager.h"
 
 class Game
 {
@@ -11,11 +12,8 @@ private:
 	bool gameRunning;
 	SDL_Window * window;
 	SDL_Renderer* renderer;
-
-	SDL_Texture* texture;
-	SDL_Rect sourceRectangle;
-	SDL_Rect destinationRectangle;
-
+	TextureManager textureManager;
+	int currentFrame;
 
 public:
 	//constructor and destructor
