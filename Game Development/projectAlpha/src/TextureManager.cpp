@@ -1,9 +1,19 @@
 #include "TextureManager.h"
-#include <SDL.h>
 #include <iostream>
 #include <SDL_image.h>
 #include <string>
 
+TextureManager* TextureManager::s_pInstance = 0;
+
+TextureManager* TextureManager::Instance()
+{
+	if (s_pInstance == 0)
+	{
+		s_pInstance = new TextureManager();
+		return s_pInstance;
+	}
+	return s_pInstance;
+}
 
 bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* renderer)
 {
@@ -45,8 +55,8 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
 	SDL_Rect sourceRectangle;
 	SDL_Rect destinationRectangle;
 
-	sourceRectangle.x = width * currentFrame;
-	sourceRectangle.y = height * (currentRow - 1);
+	sourceRectangle.x = width * currentFrame; // frame starts from 0 to n - 1 
+	sourceRectangle.y = height * (currentRow - 1); // row starts from 1 to n 
 
 	destinationRectangle.w = sourceRectangle.w = width;
 	destinationRectangle.h = sourceRectangle.h = height;

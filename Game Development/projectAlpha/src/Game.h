@@ -4,6 +4,8 @@
 
 #include <SDL.h>
 #include "TextureManager.h"
+#include "GameObject.h"
+#include "Player.h"
 
 class Game
 {
@@ -12,8 +14,7 @@ private:
 	bool gameRunning;
 	SDL_Window * window;
 	SDL_Renderer* renderer;
-	TextureManager textureManager;
-	int currentFrame;
+	Player playerSprite;
 
 public:
 	//constructor and destructor
@@ -21,6 +22,7 @@ public:
 	~Game();
 
 	//core functions
+
 	bool init(const char * title, int x_Position, int y_Position, int width, int hieght, Uint32 flags);
 	void handleEvents();
 	void update();
