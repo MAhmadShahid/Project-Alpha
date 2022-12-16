@@ -54,6 +54,7 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 	//Setting up player object
 	playerSprite.load(0, 0, 48, 48, "player");
+	playerSprite.printStats();
 
 	gameRunning = true;
 	return true;
@@ -91,7 +92,7 @@ void Game::render()
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 	// clear the window to black
 	SDL_RenderClear(renderer);// Clear the current rendering target with the drawing color.
-	//SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);
+	/*SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);*/
 	playerSprite.draw(renderer);
 	// show the window
 	SDL_RenderPresent(renderer); // Update the screen with any rendering performed since the previous call.

@@ -26,6 +26,7 @@ public:
 	void draw(SDL_Renderer * renderer);
 	void update();
 	void clean();
+	void printStats();
 };
 
 #endif // !__GameObject__

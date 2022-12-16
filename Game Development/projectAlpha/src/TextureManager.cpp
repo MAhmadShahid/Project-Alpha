@@ -51,12 +51,14 @@ void TextureManager::draw(std::string id, int x, int y, int width, int height, S
 
 void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow, int currentFrame, SDL_Renderer* renderer, SDL_RendererFlip flip)
 {
-	SDL_Texture* texture = textureMap[id];
 	SDL_Rect sourceRectangle;
 	SDL_Rect destinationRectangle;
 
 	sourceRectangle.x = width * currentFrame; // frame starts from 0 to n - 1 
-	sourceRectangle.y = height * (currentRow - 1); // row starts from 1 to n 
+	sourceRectangle.y = height * (currentRow - 1); // row starts from 1 to n
+
+	destinationRectangle.x = x;
+	destinationRectangle.y = y;
 
 	destinationRectangle.w = sourceRectangle.w = width;
 	destinationRectangle.h = sourceRectangle.h = height;

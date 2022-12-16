@@ -14,3 +14,13 @@ void Player::update()
 {
 
 }
+
+void Player::printStats()
+{
+	GameObject::printStats();
+}
+
+void Player::clean()
+{
+
+}
