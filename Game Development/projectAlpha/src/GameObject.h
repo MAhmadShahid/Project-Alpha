@@ -22,11 +22,14 @@ protected:
 	int height;
 
 public:
-	void load(int x, int y, int width, int height, std::string textureID);
-	void draw(SDL_Renderer * renderer);
+	virtual void load(int x, int y, int width, int height, std::string textureID);
+	virtual void load(int x, int y, int width, int height, int rowNumber, int frameNumber, std::string textureID);
+	virtual void draw(SDL_Renderer * renderer);
 	void update();
 	void clean();
-	void printStats();
+	virtual void setCurrentFrame(int frameNumber);
+	virtual void setCurrentRow(int rowNumber);
+	virtual void printStats();
 };
 
 #endif // !__GameObject__

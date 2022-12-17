@@ -3,6 +3,7 @@
 #define __Game__
 
 #include <SDL.h>
+#include <vector>
 #include "TextureManager.h"
 #include "GameObject.h"
 #include "Player.h"
@@ -14,7 +15,8 @@ private:
 	bool gameRunning;
 	SDL_Window * window;
 	SDL_Renderer* renderer;
-	Player playerSprite;
+	std::vector<GameObject*> gameObjects;
+
 
 public:
 	//constructor and destructor

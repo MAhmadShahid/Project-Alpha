@@ -53,8 +53,17 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 
 	//Setting up player object
-	playerSprite.load(0, 0, 48, 48, "player");
-	playerSprite.printStats();
+	GameObject* playerSprite = new Player();
+	GameObject* enemySprite = new Player();
+
+	playerSprite->load(0, 0, 48, 48, "player");
+	enemySprite->load(50, 50, 48, 48,2, 2, "player");
+
+
+	gameObjects.push_back(playerSprite);
+	gameObjects.push_back(enemySprite);
+
+
 
 	gameRunning = true;
 	return true;
@@ -93,7 +102,11 @@ void Game::render()
 	// clear the window to black
 	SDL_RenderClear(renderer);// Clear the current rendering target with the drawing color.
 	/*SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);*/
-	playerSprite.draw(renderer);
+
+	for (auto gameObject : gameObjects)
+	{
+		gameObject->draw(renderer);
+	}
 	// show the window
 	SDL_RenderPresent(renderer); // Update the screen with any rendering performed since the previous call.
 }
