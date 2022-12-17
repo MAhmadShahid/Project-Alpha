@@ -1,8 +1,20 @@
 #include "Game.h"
 
 //#include <SDL.h>
-#include <iostream>
-#include <SDL_image.h>
+
+
+Game* Game::s_pInstance = 0;
+
+Game* Game::instance()
+{
+	if (s_pInstance == 0)
+	{
+		s_pInstance = new Game();
+		return s_pInstance;
+	}
+
+	return s_pInstance;
+}
 
 Game::Game()
 {
@@ -17,6 +29,7 @@ bool Game::running()
 {
 	return gameRunning;
 }
+
 
 bool Game::init(const char * title, int x_Position, int y_Position, int width, int hieght, Uint32 flags)
 {
@@ -53,11 +66,9 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 
 	//Setting up player object
-	GameObject* playerSprite = new Player();
-	GameObject* enemySprite = new Player();
+	GameObject* playerSprite = new Player(new LoaderParams(0, 0, 48, 48, 0, 1, "player"));
+	GameObject* enemySprite = new Player(new LoaderParams(50, 50, 48, 48, 2, 2, "player"));
 
-	playerSprite->load(0, 0, 48, 48, "player");
-	enemySprite->load(50, 50, 48, 48,2, 2, "player");
 
 
 	gameObjects.push_back(playerSprite);
@@ -105,12 +116,15 @@ void Game::render()
 
 	for (auto gameObject : gameObjects)
 	{
-		gameObject->draw(renderer);
+		gameObject->draw();
 	}
+
+
 	// show the window
 	SDL_RenderPresent(renderer); // Update the screen with any rendering performed since the previous call.
 }
 
+SDL_Renderer* Game::getRenderer() { return renderer; }
 
 
 void Game::clean()
@@ -120,4 +134,5 @@ void Game::clean()
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
 }
+
 

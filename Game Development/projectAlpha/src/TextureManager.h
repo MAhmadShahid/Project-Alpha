@@ -3,8 +3,7 @@
 #include <string>
 #include <SDL.h>
 
-#ifndef __TextureManager__
-#define __TextureManager__
+
 
 class TextureManager // Singleton Class
 {
@@ -26,5 +25,5 @@ public:
 
 };
 
-#endif
+
 

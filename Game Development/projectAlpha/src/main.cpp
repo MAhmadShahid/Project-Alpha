@@ -1,6 +1,6 @@
 #include<SDL.h>
-#include "Game.h"
 #include<iostream>
+#include "Game.h"
 
 
 
@@ -8,7 +8,7 @@
 int main(int argc, char* args[])
 {
 
-	Game* myGame = new Game();
+	Game* myGame = Game::instance();
 
 	myGame->init("Class Setup", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 720, SDL_WINDOW_SHOWN);
 
