@@ -26,6 +26,16 @@ private:
 	InputHandler();
 	~InputHandler() {}
 
+	/*Helping Functions*/
+	// functions to handle different event types
+	// handle keyboard events
+	void onKeyDown(SDL_Event& event);
+	
+	// handle mouse events
+	void onMouseButtonDown(SDL_Event& event);
+	void onMouseButtonUp(SDL_Event& event);
+	void onMouseMotion(SDL_Event& event);
+
 
 public:
 	static InputHandler* instance();
