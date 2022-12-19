@@ -38,13 +38,12 @@ public:
 	void update();
 	void render();
 	void clean();
-
-	SDL_Renderer* getRenderer();
-	SDL_Window* getWindow();
+	void quit();
 
 	//helping functions
 	bool running();
-
+	SDL_Renderer* getRenderer();
+	SDL_Window* getWindow();
 };
 
 

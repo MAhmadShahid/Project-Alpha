@@ -1,4 +1,5 @@
 #include "Game.h"
+#include "InputHandler.h"
 
 //#include <SDL.h>
 typedef Game Game;
@@ -60,20 +61,20 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 	//Game Initialization Code Here
 
 	//Loading Game Textures
-	bool resourcesLoaded = TextureManager::Instance()->load("projectAlpha/src/Assets/player.png", "player", renderer);
+	bool resourcesLoaded = TextureManager::Instance()->load("projectAlpha/src/Assets/ghostRightFace.bmp", "player", renderer);
 	if (!resourcesLoaded)
 		std::cout << "Error in loading resources";
 
 
 	//Setting up player object
-	GameObject* playerSprite = new Player(new LoaderParams(0, 0, 48, 48, 0, 1, "player"));
-	GameObject* enemySprite = new Player(new LoaderParams(50, 50, 48, 48, 2, 2, "player"));
+	/*GameObject* playerSprite = new Player(new LoaderParams(0, 0, 48, 48, 0, 1, "player"));
+	GameObject* enemySprite = new Player(new LoaderParams(50, 50, 48, 48, 2, 2, "player"))*/;
+	//gameObjects.push_back(playerSprite);
+	//gameObjects.push_back(enemySprite);
 
-
-
-	gameObjects.push_back(playerSprite);
-	gameObjects.push_back(enemySprite);
-
+	GameObject* ghostSprite = new Player(new LoaderParams(39, 150, 39, 39, 0, 1, "player"));
+	
+	gameObjects.push_back(ghostSprite);
 
 
 	gameRunning = true;
@@ -83,26 +84,12 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 void Game::handleEvents()
 {
-	SDL_Event event;
-
-	if (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			gameRunning = false;
-			break;
-
-		default:
-			break;
-
-		}
-	}
+	InputHandler::instance()->update();
 }
 
 void Game::update() 
 {
-	
+
 	for (auto gameObject : gameObjects)
 		gameObject->update();
 	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/	
@@ -112,7 +99,7 @@ void Game::render()
 {
 	// everything succeeded lets draw the window
 	// set to black // This function expects Red, Green, Blue and Alpha as color values
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	SDL_SetRenderDrawColor(renderer, 192, 192, 192, 255);
 	// clear the window to black
 	SDL_RenderClear(renderer);// Clear the current rendering target with the drawing color.
 	/*SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);*/
@@ -137,6 +124,11 @@ void Game::clean()
 	SDL_DestroyWindow(window);
 	SDL_DestroyRenderer(renderer);
 	SDL_Quit();
+}
+
+void Game::quit()
+{
+	gameRunning = false;
 }
 
 

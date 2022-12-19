@@ -24,8 +24,12 @@ void SDLGameObject::update()
 
 	SDL_GetWindowSize(Game::instance()->getWindow(), &windowWidth, &windowHeight);
 	
-	
-	if ((int)m_position.getX() < windowWidth - 48)
+
+	//the sprite stays in the window frame
+	bool inValidWidthRange = ((int)m_position.getX() <= windowWidth - 39) && ((int)m_position.getX() >= 0);
+	bool inValidHeightRange = ((int)m_position.getY() <= windowHeight - 39) && ((int)m_position.getY() >= 0);
+
+	if (inValidWidthRange && inValidHeightRange)
 	{
 		m_velocity += m_acceleration;
 		m_position += m_velocity;
