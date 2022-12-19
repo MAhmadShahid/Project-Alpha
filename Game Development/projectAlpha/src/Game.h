@@ -40,10 +40,12 @@ public:
 	void clean();
 
 	SDL_Renderer* getRenderer();
+	SDL_Window* getWindow();
 
 	//helping functions
 	bool running();
 
 };
+
 
 

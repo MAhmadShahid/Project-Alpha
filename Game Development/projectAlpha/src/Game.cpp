@@ -1,7 +1,7 @@
 #include "Game.h"
 
 //#include <SDL.h>
-
+typedef Game Game;
 
 Game* Game::s_pInstance = 0;
 
@@ -102,6 +102,9 @@ void Game::handleEvents()
 
 void Game::update() 
 {
+	
+	for (auto gameObject : gameObjects)
+		gameObject->update();
 	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/	
 }
 
@@ -125,6 +128,7 @@ void Game::render()
 }
 
 SDL_Renderer* Game::getRenderer() { return renderer; }
+SDL_Window* Game::getWindow() { return window; }
 
 
 void Game::clean()

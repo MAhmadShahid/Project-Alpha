@@ -189,12 +189,14 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <ClCompile Include="projectAlpha\src\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="projectAlpha\src\InputHandler.h" />
     <ClInclude Include="projectAlpha\src\LoaderParams.h" />
     <ClInclude Include="projectAlpha\src\Player.h" />
     <ClInclude Include="projectAlpha\src\GameObject.h" />
     <ClInclude Include="projectAlpha\src\Game.h" />
     <ClInclude Include="projectAlpha\src\SDLGameObject.h" />
     <ClInclude Include="projectAlpha\src\TextureManager.h" />
+    <ClInclude Include="projectAlpha\src\Vector2D.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp" />

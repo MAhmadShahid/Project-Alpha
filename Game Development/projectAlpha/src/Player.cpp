@@ -13,7 +13,8 @@ void Player::draw()
 
 void Player::update()
 {
-
+	m_acceleration.setX(0.1f);
+	SDLGameObject::update();
 }
 
 
