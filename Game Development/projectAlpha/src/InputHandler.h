@@ -15,11 +15,10 @@ class InputHandler
 private:
 	/*Attributes*/
 	static InputHandler* s_pInstance;
-
-	//mouse
-	std::vector<bool> m_mouseButtonStates;
+	
 	Vector2D* m_mousePosition = new Vector2D(0, 0);
-	//keyboard
+	std::vector<bool> m_mouseButtonStates;
+
 	const Uint8* m_keystate = nullptr;
 	
 	/*Constructor and Destructor*/
