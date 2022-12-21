@@ -65,6 +65,9 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 	if (!resourcesLoaded)
 		std::cout << "Error in loading resources";
 
+	m_gameStateMachine = new GameStateMachine();
+	m_gameStateMachine->pushState(new MenuState());
+
 
 	//Setting up player object
 	/*GameObject* playerSprite = new Player(new LoaderParams(0, 0, 48, 48, 0, 1, "player"));
@@ -85,6 +88,9 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 void Game::handleEvents()
 {
 	InputHandler::instance()->update();
+
+	if (InputHandler::instance()->isKeyDown(SDL_SCANCODE_RETURN))
+		m_gameStateMachine->changeState(new PlayState());
 }
 
 void Game::update() 

@@ -14,13 +14,13 @@ void MenuState::render()
 
 bool MenuState::onEnter()
 {
-	std::cout << "Entering Menu" << std::endl;
+	std::cout << "Entering MenuState" << std::endl;
 	return true;
 
 }
 
 bool MenuState::onExit()
 {
-	std::cout << "Exiting Menu" << std::endl;
+	std::cout << "Exiting MenuState" << std::endl;
 	return true;
 }
