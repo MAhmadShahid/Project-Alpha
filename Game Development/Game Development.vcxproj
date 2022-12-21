@@ -186,6 +186,7 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <ClCompile Include="projectAlpha\src\GameStateMachine.cpp" />
     <ClCompile Include="projectAlpha\src\InputHandler.cpp" />
     <ClCompile Include="projectAlpha\src\main.cpp" />
+    <ClCompile Include="projectAlpha\src\MenuButton.cpp" />
     <ClCompile Include="projectAlpha\src\MenuState.cpp" />
     <ClCompile Include="projectAlpha\src\Player.cpp" />
     <ClCompile Include="projectAlpha\src\SDLGameObject.cpp" />
@@ -195,6 +196,7 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\GameState.h" />
     <ClInclude Include="projectAlpha\src\GameStateMachine.h" />
+    <ClInclude Include="projectAlpha\src\MenuButton.h" />
     <ClInclude Include="projectAlpha\src\InputHandler.h" />
     <ClInclude Include="projectAlpha\src\LoaderParams.h" />
     <ClInclude Include="projectAlpha\src\MenuState.h" />

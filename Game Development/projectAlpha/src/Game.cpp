@@ -95,7 +95,7 @@ void Game::handleEvents()
 
 void Game::update() 
 {
-
+	m_gameStateMachine->update();
 	for (auto gameObject : gameObjects)
 		gameObject->update();
 	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/	
@@ -110,6 +110,7 @@ void Game::render()
 	SDL_RenderClear(renderer);// Clear the current rendering target with the drawing color.
 	/*SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);*/
 
+	m_gameStateMachine->render();
 	for (auto gameObject : gameObjects)
 	{
 		gameObject->draw();

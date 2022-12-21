@@ -45,6 +45,9 @@
     <ClCompile Include="projectAlpha\src\GameStateMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="projectAlpha\src\MenuButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\Game.h">
@@ -84,6 +87,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="projectAlpha\src\GameStateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\MenuButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
