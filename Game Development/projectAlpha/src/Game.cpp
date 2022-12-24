@@ -58,12 +58,6 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 
-	//Game Initialization Code Here
-
-	//Loading Game Textures
-	bool resourcesLoaded = TextureManager::Instance()->load("projectAlpha/src/Assets/ghostRightFace.bmp", "player", renderer);
-	if (!resourcesLoaded)
-		std::cout << "Error in loading resources";
 
 	m_gameStateMachine = new GameStateMachine();
 	m_gameStateMachine->pushState(new MenuState());
@@ -124,6 +118,7 @@ void Game::render()
 
 SDL_Renderer* Game::getRenderer() { return renderer; }
 SDL_Window* Game::getWindow() { return window; }
+GameStateMachine* Game::getGameStateMachine() { return m_gameStateMachine; }
 
 Vector2D Game::getWindowSize() 
 { 

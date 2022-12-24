@@ -80,7 +80,7 @@ bool MenuState::onExit()
 
 void MenuState::s_menuToPlay()
 {
-	std::cout << std::endl << "Clicked Play Button; transitioning to play state" << std::endl;
+	Game::instance()->getGameStateMachine()->changeState(new PlayState());
 }
 
 void MenuState::s_exitFromMenu()

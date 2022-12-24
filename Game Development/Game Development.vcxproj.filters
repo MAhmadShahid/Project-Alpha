@@ -48,6 +48,9 @@
     <ClCompile Include="projectAlpha\src\MenuButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="projectAlpha\src\PauseState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\Game.h">
@@ -92,6 +95,9 @@
     <ClInclude Include="projectAlpha\src\MenuButton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="projectAlpha\src\PauseState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp">
@@ -113,6 +119,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="projectAlpha\src\Assets\GUIItems\MenuButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\src\Assets\GUIItems\MainMenuButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\src\Assets\GUIItems\ResumeButton.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
