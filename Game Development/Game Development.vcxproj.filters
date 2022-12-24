@@ -109,5 +109,11 @@
     <Image Include="projectAlpha\src\Assets\player.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="projectAlpha\src\Assets\GUIItems\ExitButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\src\Assets\GUIItems\MenuButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

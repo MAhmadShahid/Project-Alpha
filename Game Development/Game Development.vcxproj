@@ -196,9 +196,9 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\GameState.h" />
     <ClInclude Include="projectAlpha\src\GameStateMachine.h" />
-    <ClInclude Include="projectAlpha\src\MenuButton.h" />
     <ClInclude Include="projectAlpha\src\InputHandler.h" />
     <ClInclude Include="projectAlpha\src\LoaderParams.h" />
+    <ClInclude Include="projectAlpha\src\MenuButton.h" />
     <ClInclude Include="projectAlpha\src\MenuState.h" />
     <ClInclude Include="projectAlpha\src\Player.h" />
     <ClInclude Include="projectAlpha\src\GameObject.h" />
@@ -212,6 +212,8 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <Image Include="projectAlpha\Assets\ghostRight.bmp" />
     <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp" />
     <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp" />
+    <Image Include="projectAlpha\src\Assets\GUIItems\ExitButton.png" />
+    <Image Include="projectAlpha\src\Assets\GUIItems\MenuButton.png" />
     <Image Include="projectAlpha\src\Assets\player.png" />
     <Image Include="projectAlpha\src\Assets\spriteSheet.bmp" />
   </ItemGroup>

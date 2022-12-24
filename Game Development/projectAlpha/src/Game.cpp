@@ -75,9 +75,10 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 	//gameObjects.push_back(playerSprite);
 	//gameObjects.push_back(enemySprite);
 
-	GameObject* ghostSprite = new Player(new LoaderParams(39, 150, 39, 39, 0, 1, "player"));
-	
-	gameObjects.push_back(ghostSprite);
+	//GameObject* ghostSprite = new Player(new LoaderParams(39, 150, 39, 39, 0, 1, "player"));
+	//
+	//gameObjects.push_back(ghostSprite);
+
 
 
 	gameRunning = true;
@@ -89,8 +90,8 @@ void Game::handleEvents()
 {
 	InputHandler::instance()->update();
 
-	if (InputHandler::instance()->isKeyDown(SDL_SCANCODE_RETURN))
-		m_gameStateMachine->changeState(new PlayState());
+	/*if (InputHandler::instance()->isKeyDown(SDL_SCANCODE_RETURN))
+		m_gameStateMachine->changeState(new PlayState());*/
 }
 
 void Game::update() 
@@ -123,6 +124,16 @@ void Game::render()
 
 SDL_Renderer* Game::getRenderer() { return renderer; }
 SDL_Window* Game::getWindow() { return window; }
+
+Vector2D Game::getWindowSize() 
+{ 
+	int windowWidth = 0;
+	int windowHeight = 0;
+
+	SDL_GetWindowSize(window, &windowWidth, &windowHeight);
+
+	return Vector2D(windowWidth, windowHeight);
+}
 
 
 void Game::clean()

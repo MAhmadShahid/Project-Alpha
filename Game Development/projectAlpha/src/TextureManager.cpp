@@ -20,13 +20,20 @@ bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* re
 	SDL_Surface* tempSurface = IMG_Load(fileName.c_str());
 
 	if (tempSurface == nullptr)
+	{
+		std::cout << "\nFailed to load image as a surface\n";
+		std::cout << SDL_GetError();
 		return false;
-
+	}
 	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, tempSurface);
 	SDL_FreeSurface(tempSurface);
 
 	if (texture == nullptr)
+	{
+		std::cout << "\nFailed to load image as a texture\n";
+		std::cout << SDL_GetError();
 		return false;
+	}
 
 	textureMap[id] = texture;
 	return true;
@@ -64,4 +71,9 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
 	destinationRectangle.h = sourceRectangle.h = height;
 
 	SDL_RenderCopyEx(renderer, textureMap[id], &sourceRectangle, &destinationRectangle, 0, 0, flip);
+}
+
+void TextureManager::clearFromTextureManager(std::string id)
+{
+	textureMap.erase(id);
 }

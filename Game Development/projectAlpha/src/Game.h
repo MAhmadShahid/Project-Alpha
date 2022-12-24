@@ -48,6 +48,7 @@ public:
 	bool running();
 	SDL_Renderer* getRenderer();
 	SDL_Window* getWindow();
+	Vector2D getWindowSize();
 };
 
 

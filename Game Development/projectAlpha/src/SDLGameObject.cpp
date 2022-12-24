@@ -2,7 +2,7 @@
 #include "TextureManager.h"
 #include "Game.h"
 
-SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams), m_position(pParams -> getXPosition(), pParams -> getXPosition()), m_velocity(0,0), m_acceleration(0,0)
+SDLGameObject::SDLGameObject(const LoaderParams* pParams) : GameObject(pParams), m_position(pParams -> getXPosition(), pParams -> getYPosition()), m_velocity(0,0), m_acceleration(0,0)
 {
 	m_textureID = pParams->getTextureID();
 
@@ -43,7 +43,7 @@ void SDLGameObject::clean()
 
 void SDLGameObject::printStats()
 {
-	std::cout << "Texture ID = " << m_textureID << std::endl;
+	std::cout << "\nTexture ID = " << m_textureID << std::endl;
 	std::cout << "X = " << m_position.getX() << ", Y = " << m_position.getY() << std::endl;
 	std::cout << "Width = " << m_width << ", Height = " << m_height << std::endl;
 	std::cout << "Current : Row = " << m_currentRow << ", Frame = " << m_currentFrame << std::endl;
