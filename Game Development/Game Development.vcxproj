@@ -181,6 +181,8 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="projectAlpha\src\AnimatedGraphic.cpp" />
+    <ClCompile Include="projectAlpha\src\Enemy.cpp" />
     <ClCompile Include="projectAlpha\src\Game.cpp" />
     <ClCompile Include="projectAlpha\src\GameObject.cpp" />
     <ClCompile Include="projectAlpha\src\GameStateMachine.cpp" />
@@ -195,6 +197,8 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <ClCompile Include="projectAlpha\src\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="projectAlpha\src\AnimatedGraphic.h" />
+    <ClInclude Include="projectAlpha\src\Enemy.h" />
     <ClInclude Include="projectAlpha\src\GameState.h" />
     <ClInclude Include="projectAlpha\src\GameStateMachine.h" />
     <ClInclude Include="projectAlpha\src\InputHandler.h" />

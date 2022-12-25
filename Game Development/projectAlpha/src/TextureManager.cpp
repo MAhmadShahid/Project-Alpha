@@ -40,35 +40,74 @@ bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* re
 
 }
 
-void TextureManager::draw(std::string id, int x, int y, int width, int height, SDL_Renderer* renderer, SDL_RendererFlip flip)
+//void TextureManager::draw(std::string id, int x, int y, int width, int height, SDL_Renderer* renderer, SDL_RendererFlip flip)
+//{
+//	SDL_Rect sourceRectangle;
+//	SDL_Rect destinationRectangle;
+//
+//	sourceRectangle.x = sourceRectangle.y = 0;
+//	
+//	destinationRectangle.x = x;
+//	destinationRectangle.y = y;
+//
+//	destinationRectangle.w = sourceRectangle.w = width;
+//	destinationRectangle.h = sourceRectangle.h = height;
+//
+//	SDL_RenderCopyEx(renderer, textureMap[id], &sourceRectangle, &destinationRectangle, 0, 0, flip);
+//}
+
+//this new function adds support for scaling
+void TextureManager::draw(std::string id, int x, int y, int width, int height, int scale_x, int scale_y,SDL_Renderer* renderer, SDL_RendererFlip flip)
 {
 	SDL_Rect sourceRectangle;
 	SDL_Rect destinationRectangle;
 
 	sourceRectangle.x = sourceRectangle.y = 0;
-	
-	destinationRectangle.x = x;
-	destinationRectangle.y = y;
+	sourceRectangle.w = width; sourceRectangle.h = height;
 
-	destinationRectangle.w = sourceRectangle.w = width;
-	destinationRectangle.h = sourceRectangle.h = height;
+	destinationRectangle.x = x; destinationRectangle.y = y;
+	
+	destinationRectangle.w = scale_x * width;
+	destinationRectangle.h = scale_y * height;
 
 	SDL_RenderCopyEx(renderer, textureMap[id], &sourceRectangle, &destinationRectangle, 0, 0, flip);
 }
 
-void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow, int currentFrame, SDL_Renderer* renderer, SDL_RendererFlip flip)
+//void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow, int currentFrame, SDL_Renderer* renderer, SDL_RendererFlip flip)
+//{
+//	SDL_Rect sourceRectangle;
+//	SDL_Rect destinationRectangle;
+//
+//
+//	sourceRectangle.x = width * currentFrame; // frame starts from 0 to n - 1 
+//	sourceRectangle.y = height * (currentRow - 1); // row starts from 1 to n
+//
+//	destinationRectangle.x = x;
+//	destinationRectangle.y = y;
+//
+//	destinationRectangle.w = sourceRectangle.w = width;
+//	destinationRectangle.h = sourceRectangle.h = height;
+//
+//	SDL_RenderCopyEx(renderer, textureMap[id], &sourceRectangle, &destinationRectangle, 0, 0, flip);
+//}
+
+//this new function adds support for scaling
+void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow, int currentFrame, int scale_x, int scale_y,SDL_Renderer* renderer, SDL_RendererFlip flip)
 {
 	SDL_Rect sourceRectangle;
 	SDL_Rect destinationRectangle;
 
+	//setting up source rectangle
 	sourceRectangle.x = width * currentFrame; // frame starts from 0 to n - 1 
 	sourceRectangle.y = height * (currentRow - 1); // row starts from 1 to n
 
-	destinationRectangle.x = x;
-	destinationRectangle.y = y;
+	sourceRectangle.w = width; sourceRectangle.h = height;
 
-	destinationRectangle.w = sourceRectangle.w = width;
-	destinationRectangle.h = sourceRectangle.h = height;
+	//setting up destination rectangle
+	destinationRectangle.x = x; destinationRectangle.y = y;
+
+	destinationRectangle.w = scale_x * width;
+	destinationRectangle.h = scale_y * height;
 
 	SDL_RenderCopyEx(renderer, textureMap[id], &sourceRectangle, &destinationRectangle, 0, 0, flip);
 }

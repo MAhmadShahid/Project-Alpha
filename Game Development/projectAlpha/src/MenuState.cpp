@@ -52,8 +52,9 @@ bool MenuState::onEnter()
 	GameObject* playButton = new MenuButton(new LoaderParams(buttonStartingLocation.getX(), buttonStartingLocation.getY(), buttonDimensions.getX(), buttonDimensions.getY(), 0, 1, "PlayButton"), s_menuToPlay);
 	GameObject* exitButton = new MenuButton(new LoaderParams(buttonStartingLocation.getX(), buttonStartingLocation.getY() + 70.0f, buttonDimensions.getX(), buttonDimensions.getY(), 0, 1, "ExitButton"), s_exitFromMenu);
 
-	m_menuObjects.push_back(exitButton);
 	m_menuObjects.push_back(playButton);
+	m_menuObjects.push_back(exitButton);
+
 
 	m_menuObjects[0]->printStats();
 	m_menuObjects[1]->printStats();

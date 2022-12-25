@@ -11,9 +11,6 @@ std::string const PauseState::s_pauseID = "PAUSE";
 
 void PauseState::update()
 {
-	if (InputHandler::instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
-		s_backToPlay();
-
 	for (int i = 0; i < pauseStateObjects.size(); i++)
 		pauseStateObjects[i]->update();
 }

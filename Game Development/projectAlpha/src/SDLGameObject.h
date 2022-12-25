@@ -18,6 +18,9 @@ protected:
 	int m_currentRow;
 	int m_currentFrame;
 
+	int scale_x = 1;
+	int scale_y = 1;
+
 	std::string m_textureID;
 
 public:
