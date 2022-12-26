@@ -57,6 +57,30 @@
     <ClCompile Include="projectAlpha\src\AnimatedGraphic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="projectAlpha\src\GameOverState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\gameObjectFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\StateParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\MainMenuState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\Game.h">
@@ -110,34 +134,61 @@
     <ClInclude Include="projectAlpha\src\AnimatedGraphic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="projectAlpha\src\GameOverState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\tinystr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\tinyxml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\gameObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\StateParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\MainMenuState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp">
+    <Image Include="projectAlpha\Assets\ghostRightFace.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\spriteSheet.bmp">
+    <Image Include="projectAlpha\Assets\spriteSheet.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp">
+    <Image Include="projectAlpha\Assets\chemicalExplosion.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\player.png">
+    <Image Include="projectAlpha\Assets\player.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\GUIItems\ExitButton.png">
+    <Image Include="projectAlpha\Assets\GUIItems\ExitButton.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\GUIItems\MenuButton.png">
+    <Image Include="projectAlpha\Assets\GUIItems\PlayButton.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\GUIItems\MainMenuButton.png">
+    <Image Include="projectAlpha\Assets\GUIItems\MainMenuButton.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\GUIItems\ResumeButton.png">
+    <Image Include="projectAlpha\Assets\GUIItems\ResumeButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\RestartButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="projectAlpha\src\zlib1.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="projectAlpha\src\test.xml" />
   </ItemGroup>
 </Project>

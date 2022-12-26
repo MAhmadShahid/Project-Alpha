@@ -2,9 +2,15 @@
 #include "SDL.h"
 
 //constructor for AnimatedGraphic class
-AnimatedGraphic::AnimatedGraphic(const LoaderParams* pParams, int animSpeed) : SDLGameObject(pParams), m_animSpeed(animSpeed)
+AnimatedGraphic::AnimatedGraphic() : SDLGameObject()
 {
 
+}
+
+void AnimatedGraphic::load(const LoaderParams* pParams)
+{
+	SDLGameObject::load(pParams);
+	m_animSpeed = pParams->getAnimSpeed();
 }
 
 void AnimatedGraphic::draw()

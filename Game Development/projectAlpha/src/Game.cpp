@@ -1,5 +1,7 @@
 #include "Game.h"
 #include "InputHandler.h"
+#include "MenuButton.h"
+#include "MainMenuState.h"
 
 //#include <SDL.h>
 typedef Game Game;
@@ -58,9 +60,10 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 
+	GameObjectFactory::Instance()->registerType("MenuButton", new MenuButtonCreator());
 
 	m_gameStateMachine = new GameStateMachine();
-	m_gameStateMachine->pushState(new MenuState());
+	m_gameStateMachine->pushState(new MainMenuState());
 
 
 	//Setting up player object

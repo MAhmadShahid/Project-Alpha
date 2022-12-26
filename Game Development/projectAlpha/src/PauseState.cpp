@@ -4,9 +4,11 @@
 #include "MenuButton.h"
 #include "GameStateMachine.h"
 #include "InputHandler.h"
+#include "MainMenuState.h"
+#include "gameObjectFactory.h"
+#include "StateParser.h"
 
 std::string const PauseState::s_pauseID = "PAUSE";
-
 
 
 void PauseState::update()
@@ -23,31 +25,18 @@ void PauseState::render()
 
 bool PauseState::onEnter()
 {
-	SDL_Renderer* renderer = Game::instance()->getRenderer();
-	Vector2D windowSize = Game::instance()->getWindowSize();
-	Vector2D windowsQuarter = windowSize / 4.0f;
-	Vector2D buttonDimensions(152.0f, 52.0f);
-	Vector2D buttonCentre = buttonDimensions / 2.0f;
-	Vector2D mainMenuButtonStart = Vector2D((windowsQuarter*3.0f).getX(), (windowsQuarter * 1.0f).getY());
-	Vector2D resumeButtonStart = Vector2D((windowsQuarter * 3.0f).getX(), (windowsQuarter * 2.0f).getY());
+	GameObjectFactory::Instance()->registerType("MenuButton", new MenuButtonCreator());
 
-	if (!TextureManager::Instance()->load("projectAlpha/src/Assets/GUIItems/MainMenuButton.png", "MainMenuButton", renderer))
-	{
-		std::cout << std::endl <<"Failes to load asset:  'MainMenuButton.png'" << std::endl;
-		return false;
-	}
+	StateParser* pauseStateParser = new StateParser();
+	pauseStateParser->parseState("projectAlpha/src/test.xml", getStateID(), &pauseStateObjects, &m_textureIDList);
 
-	if (!TextureManager::Instance()->load("projectAlpha/src/Assets/GUIItems/ResumeButton.png", "ResumeButton", renderer))
-	{
-		std::cout << std::endl << "Failed to load asset: 'ResumeButton.png'" << std::endl;
-		return false;
-	}
+	//populate callback functions
 
-	GameObject* mainMenuButton = new MenuButton(new LoaderParams(mainMenuButtonStart.getX() - buttonCentre.getX(), mainMenuButtonStart.getY(), 152, 52, 0, 1, "MainMenuButton"), s_pauseToMainMenu);
-	GameObject* resumeButton = new MenuButton(new LoaderParams(resumeButtonStart.getX() - buttonCentre.getX(), resumeButtonStart.getY(), 152, 52, 0, 1, "ResumeButton"), s_backToPlay);	
+	m_callbacks.push_back(0);
+	m_callbacks.push_back(s_backToPlay);
+	m_callbacks.push_back(s_pauseToMainMenu);
 
-	pauseStateObjects.push_back(mainMenuButton);
-	pauseStateObjects.push_back(resumeButton);
+	setCallBacks(m_callbacks);
 	
 	return true;
 }
@@ -57,6 +46,9 @@ bool PauseState::onExit()
 	for (int i = 0; i < pauseStateObjects.size(); i++)
 		pauseStateObjects[i]->clean();
 
+	for (int i = 0; i < m_textureIDList.size(); i++)
+		TextureManager::Instance()->clearFromTextureMap(m_textureIDList[i]);
+	
 	pauseStateObjects.clear();
 
 	std::cout << "Exiting from Pause State";
@@ -72,5 +64,17 @@ void PauseState::s_backToPlay()
 
 void PauseState::s_pauseToMainMenu()
 {
-	Game::instance()->getGameStateMachine()->changeState(new MenuState());
+	Game::instance()->getGameStateMachine()->changeState(new MainMenuState());
+}
+
+void PauseState::setCallBacks(const std::vector<Callback>& callback)
+{
+	for (int i = 0; i < pauseStateObjects.size(); i++)
+	{
+		if (dynamic_cast<MenuButton*>(pauseStateObjects[i]))
+		{
+			MenuButton *menuButton = dynamic_cast<MenuButton*>(pauseStateObjects[i]);
+			menuButton->setCallBack(m_callbacks[menuButton->getCallBackID()]);
+		}
+	}
 }

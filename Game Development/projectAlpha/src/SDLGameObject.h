@@ -18,17 +18,21 @@ protected:
 	int m_currentRow;
 	int m_currentFrame;
 
+	int m_numFrames;
+
 	int scale_x = 1;
 	int scale_y = 1;
 
 	std::string m_textureID;
 
 public:
-	SDLGameObject(const LoaderParams* pParams);
+	SDLGameObject();
 
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
 	virtual void printStats();
+
+	virtual void load(const LoaderParams* pParams);
 
 };

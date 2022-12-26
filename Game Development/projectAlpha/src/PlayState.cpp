@@ -4,6 +4,8 @@
 #include "Game.h"
 #include "GameStateMachine.h"
 #include "PauseState.h"
+#include "gameObjectFactory.h"
+#include "StateParser.h"
 
 const std::string PlayState::s_playID = "PLAY";
 
@@ -25,17 +27,10 @@ void PlayState ::render()
 
 bool PlayState::onEnter()
 {
-	
-	if (!TextureManager::Instance()->load("projectAlpha/src/Assets/ghostRightFace.bmp", "player", Game::instance()->getRenderer()))
-	{
-		std::cout << "Error in loading resources";
-		return false;
-	}
+	GameObjectFactory::Instance()->registerType("Player", new PlayerCreator());
 
-		
-	GameObject* playerObject = new Player(new LoaderParams(0,0, 48,48, 0, 1, "player"));
-
-	playStateObjects.push_back(playerObject);
+	StateParser *playStateParser = new StateParser();
+	playStateParser->parseState("projectAlpha/src/test.xml", getStateID(), &playStateObjects, &m_textureIDList);
 
 	return true;
 
@@ -46,8 +41,10 @@ bool PlayState::onExit()
 	for (int i = 0; i < playStateObjects.size(); i++)
 		playStateObjects[i]->clean();
 
+	for (int i = 0; i < m_textureIDList.size(); i++)
+		TextureManager::Instance()->clearFromTextureMap(m_textureIDList[i]);
+
 	playStateObjects.clear();
-	TextureManager::Instance()->clearFromTextureManager("player");
 
 	return true;
 }

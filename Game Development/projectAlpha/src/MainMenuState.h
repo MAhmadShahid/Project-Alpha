@@ -2,29 +2,30 @@
 
 #include "GameState.h"
 #include "GameObject.h"
+#include "MenuState.h"
 #include <iostream>
 #include <vector>
 
-class MenuState : public GameState
+class MainMenuState : public MenuState
 {
 private:
 	static const std::string menuID;
 	std::vector<GameObject*> m_menuObjects;
 
-protected:
-	typedef void(*Callback)();
+	static void s_menuToPlay();
+	static void s_exitFromMenu();
 
-	std::vector<Callback> m_callbacks;
-	std::vector<std::string> m_textureIDList;
-	virtual void setCallBacks(const std::vector<Callback>& callback) = 0;
-
+	virtual void setCallBacks(const std::vector<Callback>& callback);
 public:
 
 	virtual void update();
 	virtual void render();
+
 	virtual bool onEnter();
-	virtual bool onExit(); 
+	virtual bool onExit();
 
 	virtual std::string getStateID() const { return menuID; }
+
+
 
 };

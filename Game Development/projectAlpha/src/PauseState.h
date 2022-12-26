@@ -5,24 +5,24 @@
 #include "LoaderParams.h"
 #include <iostream>
 #include <vector>
+#include "MenuState.h"
 
-class PauseState : public GameState
+class PauseState : public MenuState
 {
 private:
 	static const std::string s_pauseID;
-	void(*m_callback)();
 	std::vector<GameObject*> pauseStateObjects;
+	
+	static void s_pauseToMainMenu();
+	static void s_backToPlay();
 
+	virtual void setCallBacks(const std::vector<Callback>& callback);
 public:
 	virtual bool onEnter();
 	virtual bool onExit();
 
 	virtual void update();
 	virtual void render();
-
-
-	static void s_pauseToMainMenu();
-	static void s_backToPlay();
 
 	virtual std::string getStateID() const{ return s_pauseID; }
 };
