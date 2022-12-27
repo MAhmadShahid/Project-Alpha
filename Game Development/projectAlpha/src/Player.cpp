@@ -1,5 +1,8 @@
 #include "Player.h"
 #include "InputHandler.h"
+#include "Game.h"
+#include "GameStateMachine.h"
+#include "GameOverState.h"
 
 Player::Player() : SDLGameObject()
 {
@@ -58,6 +61,9 @@ void Player::update()
 		m_velocity.setY(0);
 		m_velocity.setX(0);
 	}
+
+	if (m_position.getX() > 640)
+		Game::instance()->getGameStateMachine()->changeState(new GameOverState);
 
 	SDLGameObject::update();
 }

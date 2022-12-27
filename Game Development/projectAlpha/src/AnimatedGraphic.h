@@ -4,6 +4,7 @@
 #define __AnimatedGraphic__
 
 #include "SDLGameObject.h"
+#include "gameObjectFactory.h"
 
 class AnimatedGraphic : public SDLGameObject
 {
@@ -17,6 +18,14 @@ public:
 	void update();
 	void draw();
 	void clean();
+};
+
+class AnimatedGraphicCreator : public BaseCreator
+{
+	GameObject* createGameObject() const
+	{
+		return new AnimatedGraphic;
+	}
 };
 
 #endif

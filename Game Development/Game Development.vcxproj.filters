@@ -184,6 +184,9 @@
     <Image Include="projectAlpha\Assets\GUIItems\RestartButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\GameOver.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="projectAlpha\src\zlib1.dll" />

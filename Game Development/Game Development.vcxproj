@@ -233,6 +233,7 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <Image Include="projectAlpha\Assets\chemicalExplosion.bmp" />
     <Image Include="projectAlpha\Assets\ghostRightFace.bmp" />
     <Image Include="projectAlpha\Assets\GUIItems\ExitButton.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\GameOver.png" />
     <Image Include="projectAlpha\Assets\GUIItems\MainMenuButton.png" />
     <Image Include="projectAlpha\Assets\GUIItems\PlayButton.png" />
     <Image Include="projectAlpha\Assets\GUIItems\RestartButton.png" />
