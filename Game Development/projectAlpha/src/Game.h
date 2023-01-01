@@ -24,6 +24,9 @@ private:
 	SDL_Renderer* renderer;
 	GameStateMachine* m_gameStateMachine;
 	std::vector<GameObject*> gameObjects;
+
+	int m_gameWidth;
+	int m_gameHeight;
 	
 	Game();
 
@@ -50,6 +53,8 @@ public:
 	SDL_Window* getWindow();
 	Vector2D getWindowSize();
 	GameStateMachine* getGameStateMachine();
+	int getGameWidth() const;
+	int getGameHeight() const;
 };
 
 

@@ -19,8 +19,10 @@ void SDLGameObject::load(const LoaderParams* pParams)
 	m_width = pParams->getWidth();
 	m_height = pParams->getHeight();
 
-	m_currentRow = 1;
-	m_currentFrame = 0;
+	m_currentRow = pParams->getCurrentRow();
+	m_currentFrame = pParams->getCurrentFrame();
+
+	m_numFrames = pParams->getNumFrames();
 
 	scale_x = pParams->getScaleX();
 	scale_y = pParams->getScaleY();
@@ -48,20 +50,7 @@ void SDLGameObject::draw()
 
 void SDLGameObject::update()
 {
-	int windowWidth, windowHeight;
-
-	SDL_GetWindowSize(Game::instance()->getWindow(), &windowWidth, &windowHeight);
 	
-
-	//the sprite stays in the window frame
-	bool inValidWidthRange = ((int)m_position.getX() <= windowWidth - 39) && ((int)m_position.getX() >= 0);
-	bool inValidHeightRange = ((int)m_position.getY() <= windowHeight - 39) && ((int)m_position.getY() >= 0);
-
-	if (inValidWidthRange && inValidHeightRange)
-	{
-		m_velocity += m_acceleration;
-		m_position += m_velocity;
-	}
 }
 
 void SDLGameObject::clean()

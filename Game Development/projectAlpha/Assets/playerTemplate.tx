@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+ <object name="player" class="Player" width="32" height="32">
+  <properties>
+   <property name="animSpeed" type="int" value="0"/>
+   <property name="callbackID" type="int" value="0"/>
+   <property name="numFrames" type="int" value="0"/>
+   <property name="textureHeight" type="int" value="32"/>
+   <property name="textureID" value="player"/>
+   <property name="textureWidth" type="int" value="32"/>
+  </properties>
+ </object>
+</template>

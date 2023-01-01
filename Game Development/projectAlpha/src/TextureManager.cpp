@@ -17,6 +17,13 @@ TextureManager* TextureManager::Instance()
 
 bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* renderer)
 {
+
+	if (textureMap.find(id) != textureMap.end())
+	{
+		std::cout << std::endl <<"Texture Already Exist in TextureMap" << std::endl;
+		return true;
+	}
+
 	SDL_Surface* tempSurface = IMG_Load(fileName.c_str());
 
 	if (tempSurface == nullptr)
@@ -34,6 +41,8 @@ bool TextureManager::load(std::string fileName, std::string id, SDL_Renderer* re
 		std::cout << SDL_GetError();
 		return false;
 	}
+
+
 
 	textureMap[id] = texture;
 	return true;
@@ -115,4 +124,20 @@ void TextureManager::drawFrame(std::string id, int x, int y, int width, int heig
 void TextureManager::clearFromTextureMap(std::string id)
 {
 	textureMap.erase(id);
+}
+
+void TextureManager::drawTile(std::string id, int margin, int spacing, int x, int y, int width, int height, 
+	int currentRow, int currentFrame, int additiveIncreaseFactor,SDL_Renderer* renderer)
+{
+	SDL_Rect srcRectangle;
+	SDL_Rect destRectangle;
+	srcRectangle.x = margin + (spacing + width) * currentFrame;
+	srcRectangle.y = margin + (spacing + height) * currentRow;
+	srcRectangle.w = width;
+	srcRectangle.h = height;
+	destRectangle.w = width + additiveIncreaseFactor;
+	destRectangle.h = height + additiveIncreaseFactor;
+	destRectangle.x = x;
+	destRectangle.y = y;
+	SDL_RenderCopyEx(renderer, textureMap[id], &srcRectangle, &destRectangle, 0, 0, SDL_FLIP_NONE);
 }

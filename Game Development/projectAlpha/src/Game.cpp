@@ -34,7 +34,7 @@ bool Game::running()
 }
 
 
-bool Game::init(const char * title, int x_Position, int y_Position, int width, int hieght, Uint32 flags)
+bool Game::init(const char * title, int x_Position, int y_Position, int width, int height, Uint32 flags)
 {
 
 	//Initializing SDL and setting up window and renderer
@@ -44,7 +44,7 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 	
-	window = SDL_CreateWindow(title, x_Position, y_Position, width, hieght, flags);
+	window = SDL_CreateWindow(title, x_Position, y_Position, width, height, flags);
 
 	if (!window) 
 	{ 
@@ -60,7 +60,8 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 
-	GameObjectFactory::Instance()->registerType("MenuButton", new MenuButtonCreator());
+	m_gameWidth = width;
+	m_gameHeight = height;
 
 	m_gameStateMachine = new GameStateMachine();
 	m_gameStateMachine->pushState(new MainMenuState());
@@ -147,4 +148,13 @@ void Game::quit()
 	gameRunning = false;
 }
 
+int Game::getGameWidth() const
+{
+	return m_gameWidth;
+}
+
+int Game::getGameHeight() const
+{
+	return m_gameHeight;
+}
 

@@ -5,10 +5,16 @@
 #include "SDLGameObject.h"
 #include "gameObjectFactory.h"
 
+#include <iostream>
+#include <vector>
+#include "Region2.h"
+#include "Vector2D.h"
+
+using namespace std;
 
 
 class Player : public SDLGameObject
-{
+{	
 public:
 	Player();
 	virtual void draw();
