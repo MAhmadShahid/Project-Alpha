@@ -6,8 +6,11 @@
 #include <vector>
 #include "TextureManager.h"
 #include "GameObject.h"
-#include "Player.h" 
-
+#include "Player.h"
+#include "GameState.h"
+#include "MenuState.h"
+#include "PlayState.h"
+#include "GameStateMachine.h"
 
 
 class Game
@@ -19,7 +22,11 @@ private:
 	bool gameRunning;
 	SDL_Window * window;
 	SDL_Renderer* renderer;
+	GameStateMachine* m_gameStateMachine;
 	std::vector<GameObject*> gameObjects;
+
+	int m_gameWidth;
+	int m_gameHeight;
 	
 	Game();
 
@@ -38,13 +45,16 @@ public:
 	void update();
 	void render();
 	void clean();
-
-	SDL_Renderer* getRenderer();
-	SDL_Window* getWindow();
+	void quit();
 
 	//helping functions
 	bool running();
-
+	SDL_Renderer* getRenderer();
+	SDL_Window* getWindow();
+	Vector2D getWindowSize();
+	GameStateMachine* getGameStateMachine();
+	int getGameWidth() const;
+	int getGameHeight() const;
 };
 
 

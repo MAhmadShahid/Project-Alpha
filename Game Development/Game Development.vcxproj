@@ -181,29 +181,104 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="projectAlpha\src\AnimatedGraphic.cpp" />
+    <ClCompile Include="projectAlpha\src\AnimatedTile.cpp" />
+    <ClCompile Include="projectAlpha\src\base64.cpp" />
+    <ClCompile Include="projectAlpha\src\Enemy.cpp" />
     <ClCompile Include="projectAlpha\src\Game.cpp" />
     <ClCompile Include="projectAlpha\src\GameObject.cpp" />
+    <ClCompile Include="projectAlpha\src\gameObjectFactory.cpp" />
+    <ClCompile Include="projectAlpha\src\GameOverState.cpp" />
+    <ClCompile Include="projectAlpha\src\GameStateMachine.cpp" />
+    <ClCompile Include="projectAlpha\src\InputHandler.cpp" />
+    <ClCompile Include="projectAlpha\src\Level.cpp" />
+    <ClCompile Include="projectAlpha\src\LevelParser.cpp" />
     <ClCompile Include="projectAlpha\src\main.cpp" />
+    <ClCompile Include="projectAlpha\src\MainMenuState.cpp" />
+    <ClCompile Include="projectAlpha\src\MenuButton.cpp" />
+    <ClCompile Include="projectAlpha\src\MenuState.cpp" />
+    <ClCompile Include="projectAlpha\src\ObjectLayer.cpp" />
+    <ClCompile Include="projectAlpha\src\PauseState.cpp" />
     <ClCompile Include="projectAlpha\src\Player.cpp" />
+    <ClCompile Include="projectAlpha\src\Region2.cpp" />
     <ClCompile Include="projectAlpha\src\SDLGameObject.cpp" />
+    <ClCompile Include="projectAlpha\src\PlayState.cpp" />
+    <ClCompile Include="projectAlpha\src\StateParser.cpp" />
     <ClCompile Include="projectAlpha\src\TextureManager.cpp" />
+    <ClCompile Include="projectAlpha\src\TileLayer.cpp" />
+    <ClCompile Include="projectAlpha\src\tinystr.cpp" />
+    <ClCompile Include="projectAlpha\src\tinyxml.cpp" />
+    <ClCompile Include="projectAlpha\src\tinyxmlerror.cpp" />
+    <ClCompile Include="projectAlpha\src\tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="projectAlpha\src\AnimatedGraphic.h" />
+    <ClInclude Include="projectAlpha\src\AnimatedTile.h" />
+    <ClInclude Include="projectAlpha\src\base64.h" />
+    <ClInclude Include="projectAlpha\src\Enemy.h" />
+    <ClInclude Include="projectAlpha\src\gameObjectFactory.h" />
+    <ClInclude Include="projectAlpha\src\GameOverState.h" />
+    <ClInclude Include="projectAlpha\src\GameState.h" />
+    <ClInclude Include="projectAlpha\src\GameStateMachine.h" />
     <ClInclude Include="projectAlpha\src\InputHandler.h" />
+    <ClInclude Include="projectAlpha\src\Layer.h" />
+    <ClInclude Include="projectAlpha\src\Level.h" />
+    <ClInclude Include="projectAlpha\src\LevelParser.h" />
     <ClInclude Include="projectAlpha\src\LoaderParams.h" />
+    <ClInclude Include="projectAlpha\src\MainMenuState.h" />
+    <ClInclude Include="projectAlpha\src\MenuButton.h" />
+    <ClInclude Include="projectAlpha\src\MenuState.h" />
+    <ClInclude Include="projectAlpha\src\ObjectLayer.h" />
+    <ClInclude Include="projectAlpha\src\PauseState.h" />
     <ClInclude Include="projectAlpha\src\Player.h" />
     <ClInclude Include="projectAlpha\src\GameObject.h" />
     <ClInclude Include="projectAlpha\src\Game.h" />
+    <ClInclude Include="projectAlpha\src\PlayState.h" />
+    <ClInclude Include="projectAlpha\src\Region2.h" />
     <ClInclude Include="projectAlpha\src\SDLGameObject.h" />
+    <ClInclude Include="projectAlpha\src\StateParser.h" />
     <ClInclude Include="projectAlpha\src\TextureManager.h" />
+    <ClInclude Include="projectAlpha\src\TileLayer.h" />
+    <ClInclude Include="projectAlpha\src\TileSet.h" />
+    <ClInclude Include="projectAlpha\src\tinystr.h" />
+    <ClInclude Include="projectAlpha\src\tinyxml.h" />
     <ClInclude Include="projectAlpha\src\Vector2D.h" />
+    <ClInclude Include="projectAlpha\src\zconf.h" />
+    <ClInclude Include="projectAlpha\src\zlib.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp" />
-    <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp" />
-    <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp" />
-    <Image Include="projectAlpha\src\Assets\player.png" />
-    <Image Include="projectAlpha\src\Assets\spriteSheet.bmp" />
+    <Image Include="projectAlpha\Assets\chemicalExplosion.bmp" />
+    <Image Include="projectAlpha\Assets\ghostRightFace.bmp" />
+    <Image Include="projectAlpha\Assets\ghostRightFace.png" />
+    <Image Include="projectAlpha\Assets\GhostSpriteSheet.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\ExitButton.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\GameOver.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\MainMenuButton.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\PlayButton.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\RestartButton.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\ResumeButton.png" />
+    <Image Include="projectAlpha\Assets\player.png" />
+    <Image Include="projectAlpha\Assets\Slates [32x32px orthogonal tileset by Ivan Voirol].png" />
+    <Image Include="projectAlpha\Assets\slatesHFlipped.png" />
+    <Image Include="projectAlpha\Assets\spriteSheet.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="projectAlpha\Assets\mapPrototype.tmx" />
+    <None Include="projectAlpha\Assets\slates.tsx" />
+    <None Include="projectAlpha\Assets\SlatesHFlipped.tsx" />
+    <None Include="projectAlpha\src\libjpeg-9.dll" />
+    <None Include="projectAlpha\src\libpng16-16.dll" />
+    <None Include="projectAlpha\src\libtiff-5.dll" />
+    <None Include="projectAlpha\src\libwebp-7.dll" />
+    <None Include="projectAlpha\src\zlib1.dll" />
+    <None Include="projectAlpha\src\zlibwapi.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="projectAlpha\Assets\map1.xml" />
+    <Xml Include="projectAlpha\Assets\mapPrototype.xml" />
+    <Xml Include="projectAlpha\Assets\slates.xml" />
+    <Xml Include="projectAlpha\src\test.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

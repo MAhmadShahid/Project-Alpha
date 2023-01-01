@@ -1,4 +1,7 @@
 #include "Game.h"
+#include "InputHandler.h"
+#include "MenuButton.h"
+#include "MainMenuState.h"
 
 //#include <SDL.h>
 typedef Game Game;
@@ -31,7 +34,7 @@ bool Game::running()
 }
 
 
-bool Game::init(const char * title, int x_Position, int y_Position, int width, int hieght, Uint32 flags)
+bool Game::init(const char * title, int x_Position, int y_Position, int width, int height, Uint32 flags)
 {
 
 	//Initializing SDL and setting up window and renderer
@@ -41,7 +44,7 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 	
-	window = SDL_CreateWindow(title, x_Position, y_Position, width, hieght, flags);
+	window = SDL_CreateWindow(title, x_Position, y_Position, width, height, flags);
 
 	if (!window) 
 	{ 
@@ -57,22 +60,22 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 		return false; 
 	}
 
-	//Game Initialization Code Here
+	m_gameWidth = width;
+	m_gameHeight = height;
 
-	//Loading Game Textures
-	bool resourcesLoaded = TextureManager::Instance()->load("projectAlpha/src/Assets/player.png", "player", renderer);
-	if (!resourcesLoaded)
-		std::cout << "Error in loading resources";
+	m_gameStateMachine = new GameStateMachine();
+	m_gameStateMachine->pushState(new MainMenuState());
 
 
 	//Setting up player object
-	GameObject* playerSprite = new Player(new LoaderParams(0, 0, 48, 48, 0, 1, "player"));
-	GameObject* enemySprite = new Player(new LoaderParams(50, 50, 48, 48, 2, 2, "player"));
+	/*GameObject* playerSprite = new Player(new LoaderParams(0, 0, 48, 48, 0, 1, "player"));
+	GameObject* enemySprite = new Player(new LoaderParams(50, 50, 48, 48, 2, 2, "player"))*/;
+	//gameObjects.push_back(playerSprite);
+	//gameObjects.push_back(enemySprite);
 
-
-
-	gameObjects.push_back(playerSprite);
-	gameObjects.push_back(enemySprite);
+	//GameObject* ghostSprite = new Player(new LoaderParams(39, 150, 39, 39, 0, 1, "player"));
+	//
+	//gameObjects.push_back(ghostSprite);
 
 
 
@@ -83,26 +86,15 @@ bool Game::init(const char * title, int x_Position, int y_Position, int width, i
 
 void Game::handleEvents()
 {
-	SDL_Event event;
+	InputHandler::instance()->update();
 
-	if (SDL_PollEvent(&event))
-	{
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			gameRunning = false;
-			break;
-
-		default:
-			break;
-
-		}
-	}
+	/*if (InputHandler::instance()->isKeyDown(SDL_SCANCODE_RETURN))
+		m_gameStateMachine->changeState(new PlayState());*/
 }
 
 void Game::update() 
 {
-	
+	m_gameStateMachine->update();
 	for (auto gameObject : gameObjects)
 		gameObject->update();
 	/*sourceRectangle.x = 100 + 1415 * ((SDL_GetTicks() / 100) % 5);*/	
@@ -112,11 +104,12 @@ void Game::render()
 {
 	// everything succeeded lets draw the window
 	// set to black // This function expects Red, Green, Blue and Alpha as color values
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	SDL_SetRenderDrawColor(renderer, 192, 192, 192, 255);
 	// clear the window to black
 	SDL_RenderClear(renderer);// Clear the current rendering target with the drawing color.
 	/*SDL_RenderCopy(renderer, texture, &sourceRectangle, &destinationRectangle);*/
 
+	m_gameStateMachine->render();
 	for (auto gameObject : gameObjects)
 	{
 		gameObject->draw();
@@ -129,6 +122,17 @@ void Game::render()
 
 SDL_Renderer* Game::getRenderer() { return renderer; }
 SDL_Window* Game::getWindow() { return window; }
+GameStateMachine* Game::getGameStateMachine() { return m_gameStateMachine; }
+
+Vector2D Game::getWindowSize() 
+{ 
+	int windowWidth = 0;
+	int windowHeight = 0;
+
+	SDL_GetWindowSize(window, &windowWidth, &windowHeight);
+
+	return Vector2D(windowWidth, windowHeight);
+}
 
 
 void Game::clean()
@@ -139,4 +143,18 @@ void Game::clean()
 	SDL_Quit();
 }
 
+void Game::quit()
+{
+	gameRunning = false;
+}
+
+int Game::getGameWidth() const
+{
+	return m_gameWidth;
+}
+
+int Game::getGameHeight() const
+{
+	return m_gameHeight;
+}
 

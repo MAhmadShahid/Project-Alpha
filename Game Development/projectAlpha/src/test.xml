@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<STATES>
+	<MENU>
+		<TEXTURES>
+			<texture filename="projectAlpha/Assets/GUIItems/RestartButton.png" ID="playbutton"/>
+			<texture filename="projectAlpha/Assets/GUIItems/ResumeButton.png" ID="exitbutton"/>
+		</TEXTURES>
+		<OBJECTS>
+			<object type="MenuButton" x="850" y="300" width="232" height="52" textureID="playbutton" numFrames="0" callbackID="1"/>
+			<object type="MenuButton" x="850" y="372" width="232" height="52" textureID="exitbutton" numFrames="0" callbackID="2"/>
+		</OBJECTS>
+	</MENU>
+	<PLAY>
+		<TEXTURES>
+			<texture filename="projectAlpha/Assets/ghostRightFace.bmp" ID="ghost"/>
+		</TEXTURES>
+		<OBJECTS>
+			<object type="Player" x="0" y="0" width="48" height="48" textureID="ghost" numFrames="0"/>
+		</OBJECTS>
+	</PLAY>
+	<PAUSE>
+		<TEXTURES>
+			<texture filename="projectAlpha/Assets/GUIItems/ResumeButton.png" ID="resumebutton"/>
+			<texture filename="projectAlpha/Assets/GUIItems/RestartButton.png" ID="mainbutton"/>
+		</TEXTURES>
+		<OBJECTS>
+			<object type="MenuButton" x="850" y="300" width="232" height="52" textureID="resumebutton" numFrames="0" callbackID="1"/>
+			<object type="MenuButton" x="850" y="372" width="232" height="52" textureID="mainbutton" numFrames="0" callbackID="2"/>
+		</OBJECTS>
+	</PAUSE>
+	<GAMEOVER>
+		<TEXTURES>
+			<texture filename="projectAlpha/Assets/GUIItems/GameOver.png" ID="gameovertext"/>
+			<texture filename="projectAlpha/Assets/GUIItems/ResumeButton.png" ID="mainbutton"/>
+			<texture filename="projectAlpha/Assets/GUIItems/RestartButton.png" ID="restartbutton"/>
+		</TEXTURES>
+		<OBJECTS>
+			<object type="AnimatedGraphic" x="195" y="75" width="421" height="181" textureID="gameovertext" numFrames="0" animSpeed="0"/>
+			<object type="MenuButton" x="850" y="300" width="232" height="52" textureID="mainbutton" numFrames="0" callbackID="1"/>
+			<object type="MenuButton" x="850" y="372" width="232" height="52" textureID="restartbutton" numFrames="0" callbackID="2"/>
+		</OBJECTS>
+	</GAMEOVER>
+</STATES>

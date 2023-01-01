@@ -11,7 +11,7 @@ int main(int argc, char* args[])
 	Uint32 frameStart, frameTime;
 	Game* myGame = Game::instance();
 
-	myGame->init("Class Setup", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1000, 720, SDL_WINDOW_SHOWN);
+	myGame->init("Class Setup", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280,720, SDL_WINDOW_SHOWN);
 
 	while (myGame->running())
 	{

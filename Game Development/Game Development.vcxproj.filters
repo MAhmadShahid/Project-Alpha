@@ -33,6 +33,75 @@
     <ClCompile Include="projectAlpha\src\SDLGameObject.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="projectAlpha\src\InputHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\MenuState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\PlayState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\GameStateMachine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\MenuButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\PauseState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\AnimatedGraphic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\GameOverState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinystr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinyxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinyxmlerror.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\tinyxmlparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\gameObjectFactory.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\StateParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\MainMenuState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\Level.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\TileLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\LevelParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\base64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\ObjectLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\AnimatedTile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="projectAlpha\src\Region2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\Game.h">
@@ -59,22 +128,147 @@
     <ClInclude Include="projectAlpha\src\InputHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="projectAlpha\src\GameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\MenuState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\PlayState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\PlayState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\GameStateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\MenuButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\PauseState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\AnimatedGraphic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\GameOverState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\tinystr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\tinyxml.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\gameObjectFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\StateParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\MainMenuState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\Level.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\Layer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\TileLayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\LevelParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\base64.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\zlib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\zconf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\ObjectLayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\AnimatedTile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\TileSet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectAlpha\src\Region2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\ghostRightFace.bmp">
+    <Image Include="projectAlpha\Assets\ghostRightFace.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\spriteSheet.bmp">
+    <Image Include="projectAlpha\Assets\spriteSheet.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\chemicalExplosion.bmp">
+    <Image Include="projectAlpha\Assets\chemicalExplosion.bmp">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="projectAlpha\src\Assets\player.png">
+    <Image Include="projectAlpha\Assets\player.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\ExitButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\PlayButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\MainMenuButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\ResumeButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\RestartButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\GameOver.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\Slates [32x32px orthogonal tileset by Ivan Voirol].png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\slatesHFlipped.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\ghostRightFace.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GhostSpriteSheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="projectAlpha\src\zlib1.dll" />
+    <None Include="projectAlpha\src\libjpeg-9.dll" />
+    <None Include="projectAlpha\src\libpng16-16.dll" />
+    <None Include="projectAlpha\src\libtiff-5.dll" />
+    <None Include="projectAlpha\src\libwebp-7.dll" />
+    <None Include="projectAlpha\src\zlibwapi.dll" />
+    <None Include="projectAlpha\Assets\slates.tsx" />
+    <None Include="projectAlpha\Assets\mapPrototype.tmx" />
+    <None Include="projectAlpha\Assets\SlatesHFlipped.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="projectAlpha\src\test.xml" />
+    <Xml Include="projectAlpha\Assets\map1.xml" />
+    <Xml Include="projectAlpha\Assets\slates.xml" />
+    <Xml Include="projectAlpha\Assets\mapPrototype.xml" />
   </ItemGroup>
 </Project>
