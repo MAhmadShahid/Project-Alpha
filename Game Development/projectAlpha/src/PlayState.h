@@ -11,6 +11,8 @@
 
 class PlayState : public GameState
 {
+private:
+	Player* player = nullptr;
 public:
 	virtual void update();
 	virtual void render();
@@ -26,6 +28,9 @@ private:
 	std::vector<GameObject*> playStateObjects;
 	std::vector<std::string> m_textureIDList;
 	//std::map<std::string, std::vector<Region2>> collisionRegions;
+
+	//helping function
+	bool checkPlayerCollision();
 
 	Level* pLevel;
 };

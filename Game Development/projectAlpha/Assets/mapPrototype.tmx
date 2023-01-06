@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="85" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="13" nextobjectid="9">
+<map version="1.9" tiledversion="1.9.2" orientation="orthogonal" renderorder="right-down" width="85" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="14" nextobjectid="130">
  <properties>
   <property name="ghost" value="GhostSpriteSheet.png"/>
   <property name="player" value="player.png"/>
@@ -2866,9 +2866,9 @@
    <tile gid="582"/>
    <tile/>
    <tile/>
-   <tile gid="1889"/>
-   <tile gid="1698"/>
-   <tile gid="1700"/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile gid="4232"/>
    <tile/>
@@ -3117,14 +3117,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="1850"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="4175"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="4232"/>
    <tile/>
    <tile/>
@@ -3198,18 +3198,18 @@
    <tile/>
    <tile gid="392"/>
    <tile/>
-   <tile gid="1850"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="4174"/>
-   <tile gid="1948"/>
    <tile/>
    <tile/>
    <tile/>
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="4173"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile gid="4287"/>
    <tile/>
    <tile/>
@@ -3547,10 +3547,10 @@
    <tile gid="4070"/>
    <tile gid="3736"/>
    <tile gid="3933"/>
-   <tile gid="741"/>
-   <tile gid="742"/>
-   <tile gid="742"/>
-   <tile gid="743"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -3887,10 +3887,10 @@
    <tile gid="874"/>
    <tile gid="927"/>
    <tile gid="677"/>
-   <tile gid="837"/>
-   <tile gid="742"/>
-   <tile gid="742"/>
-   <tile gid="839"/>
+   <tile/>
+   <tile/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -5910,8 +5910,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="3867"/>
-   <tile gid="3868"/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -5995,8 +5995,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile gid="3923"/>
-   <tile gid="3924"/>
+   <tile/>
+   <tile/>
    <tile/>
    <tile/>
    <tile/>
@@ -6628,7 +6628,7 @@
    <tile gid="4000"/>
    <tile/>
    <tile/>
-   <tile/>
+   <tile gid="4485"/>
    <tile/>
    <tile/>
    <tile gid="3771"/>
@@ -6713,7 +6713,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
+   <tile gid="4541"/>
    <tile/>
    <tile/>
    <tile/>
@@ -6798,7 +6798,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
+   <tile gid="4541"/>
    <tile/>
    <tile/>
    <tile/>
@@ -6883,7 +6883,7 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
+   <tile gid="4597"/>
    <tile/>
    <tile/>
    <tile/>
@@ -12782,7 +12782,7 @@
   </data>
  </layer>
  <objectgroup id="7" name="Object Layer 1">
-  <object id="5" name="ghost" class="Player" x="161.333" y="107.667" width="34" height="34">
+  <object id="5" name="ghost" class="Player" x="179.333" y="178.667" width="34" height="34">
    <properties>
     <property name="animSpeed" type="int" value="0"/>
     <property name="callbackID" type="int" value="0"/>
@@ -12824,6 +12824,1292 @@
     <property name="textureHeight" type="int" value="32"/>
     <property name="textureID" value="tileset1"/>
     <property name="textureWidth" type="int" value="32"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="13" name="Collision Zones" visible="0">
+  <object id="10" name="islandcz1" class="Region2" x="3" y="226.5" width="218.5" height="60">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="83" name="islandcz1" class="Region2" x="1.66667" y="1.16667" width="309.833" height="6">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="84" name="islandcz1" class="Region2" x="1.66667" y="1.83333" width="6.5" height="422.667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="11" name="islandcz2" class="Region2" x="3.5" y="322" width="313.5" height="60">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="17" name="islandcz8" class="Region2" x="1.5" y="427.5" width="349.5" height="63.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="31" name="miniislandcz1" class="Region2" x="4" y="704.5" width="220.5" height="29">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="32" name="miniislandcz2" class="Region2" x="31.5" y="737.5" width="32" height="59">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="33" name="miniislandcz3" class="Region2" x="31.5" y="802" width="160" height="41">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="34" name="miniislandcz4" class="Region2" x="229.5" y="737" width="90.5" height="29">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="35" name="miniislandcz5" class="Region2" x="215.5" y="738" width="8" height="31.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="36" name="miniislandcz6" class="Region2" x="193" y="816" width="10.5" height="30">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="37" name="miniislandcz7" class="Region2" x="205" y="827.5" width="207.667" height="19">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="38" name="miniislandcz8" class="Region2" x="259.5" y="769.5" width="123.5" height="25">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="39" name="miniislandcz9" class="Region2" x="418" y="770" width="21" height="76.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="miniIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="18" name="islandcz9" class="Region2" x="387.5" y="427.5" width="102" height="63.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="19" name="islandcz10" class="Region2" x="431" y="1.5" width="60" height="423.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="41" name="villagecz1" class="Region2" x="732" y="0.5" width="37" height="542.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="42" name="villagecz2" class="Region2" x="772" y="1.5" width="260" height="109">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="43" name="villagecz3" class="Region2" x="993" y="130.5" width="37" height="149.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="81" name="villagecz3" class="Region2" x="1034.33" y="273.833" width="50.3333" height="6.16667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="82" name="villagecz3" class="Region2" x="1123" y="275.167" width="53.6667" height="6.16667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="44" name="villagecz4" class="Region2" x="994.333" y="321.167" width="30.3333" height="157.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="45" name="villagecz5" class="Region2" x="772.333" y="354.5" width="185.667" height="15.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="87" name="villagecz5" class="Region2" x="792.333" y="339.833" width="14.3333" height="12.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="46" name="villagecz6" class="Region2" x="953.667" y="383.167" width="7" height="63.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="47" name="villagecz7" class="Region2" x="912.333" y="417.167" width="39.6667" height="5.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="48" name="villagecz9" class="Region2" x="771.667" y="480.5" width="155" height="15">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="50" name="villagecz10" class="Region2" x="733.667" y="548.5" width="258.333" height="88.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="51" name="villagecz11" class="Region2" x="995" y="482.5" width="59" height="155.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="52" name="villagecz12" class="Region2" x="1057.67" y="513.833" width="28.3333" height="123.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="53" name="villagecz13" class="Region2" x="1089.67" y="549.833" width="28.3333" height="86.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="54" name="villagecz14" class="Region2" x="1123" y="577.833" width="90.3333" height="122.833">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="55" name="villagecz15" class="Region2" x="1219.67" y="579.167" width="57" height="55.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="56" name="villagecz15" class="Region2" x="1252.33" y="671.833" width="151.667" height="29.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="57" name="villagecz15" class="Region2" x="1315" y="577.833" width="90.3333" height="57.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="58" name="villagecz15" class="Region2" x="1411.67" y="482.5" width="25" height="152.167">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="59" name="villagecz15" class="Region2" x="1445" y="509.833" width="97" height="190.833">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="60" name="villagecz15" class="Region2" x="1547" y="369.167" width="61" height="330.833">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="61" name="villagecz15" class="Region2" x="1415" y="321.833" width="35" height="122.833">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="62" name="villagecz15" class="Region2" x="1455.67" y="321.833" width="152.333" height="45.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="63" name="villagecz15" class="Region2" x="1545" y="1.16667" width="62.3333" height="318.167">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="88" name="japcz" class="Region2" x="1793" y="1.16667" width="39.3333" height="730.167">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="89" name="japcz" class="Region2" x="1835" y="1.16667" width="882.333" height="110.167">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="90" name="japcz" class="Region2" x="2593" y="115.167" width="122.333" height="522.167">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="91" name="japcz" class="Region2" x="2315.5" y="163.667" width="120.333" height="58.6667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="92" name="japcz" class="Region2" x="2418" y="321.167" width="77.8333" height="39.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="94" name="japcz" class="Region2" x="2436.67" y="483.167" width="151.833" height="69.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="95" name="japcz" class="Region2" x="2402.67" y="538.5" width="31.1667" height="8.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="110" name="japcz" class="Region2" x="2336.67" y="640" width="124.167" height="8.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="112" name="japcz" class="Region2" x="2455.17" y="651" width="5.66667" height="54">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="113" name="japcz" class="Region2" x="2501.17" y="651" width="5.66667" height="54">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="111" name="japcz" class="Region2" x="2499.67" y="640.5" width="124.167" height="8.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="96" name="japcz" class="Region2" x="2400" y="514.833" width="3.16667" height="32.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="99" name="japcz" class="Region2" x="2336" y="425.167" width="3.16667" height="213.167">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="100" name="japcz" class="Region2" x="2083.33" y="580.167" width="251.167" height="84.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="101" name="japcz" class="Region2" x="1990.33" y="670.167" width="304.167" height="59.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="115" name="stcz" class="Region2" x="1990.33" y="670.167" width="304.167" height="59.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="102" name="japcz" class="Region2" x="2021.33" y="582.167" width="56.6667" height="48.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="103" name="japcz" class="Region2" x="1835.83" y="581.167" width="143.667" height="48.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="104" name="japcz" class="Region2" x="1836.33" y="635.167" width="81.6667" height="95.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="105" name="japcz" class="Region2" x="1922.33" y="669.167" width="26.1667" height="95.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="114" name="stcz" class="Region2" x="1922.33" y="669.167" width="26.1667" height="95.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="106" name="japcz" class="Region2" x="1922.33" y="766.667" width="58.6667" height="31.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="117" name="stcz" class="Region2" x="1922.83" y="766.667" width="58.6667" height="31.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="107" name="japcz" class="Region2" x="2013.83" y="766.167" width="283.667" height="32.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="118" name="stcz" class="Region2" x="2013.83" y="766.167" width="283.667" height="32.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="119" name="stcz" class="Region2" x="2242.83" y="801.667" width="58.1667" height="154.833">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="120" name="stcz" class="Region2" x="2418.33" y="714.167" width="13.1667" height="180.333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="124" name="stcz" class="Region2" x="2419.33" y="897.167" width="203.167" height="11.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="125" name="stcz" class="Region2" x="2626.83" y="737.667" width="16.6667" height="168.833">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="121" name="stcz" class="Region2" x="2433.83" y="711.167" width="28.1667" height="24.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="122" name="stcz" class="Region2" x="2498.83" y="710.667" width="147.167" height="24.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="123" name="stcz" class="Region2" x="2517.33" y="738.667" width="71.1667" height="35.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="108" name="japcz" class="Region2" x="2050.33" y="732.167" width="5.16667" height="32.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="116" name="stcz" class="Region2" x="2050.33" y="732.167" width="5.16667" height="32.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="storeIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="98" name="japcz" class="Region2" x="2436.33" y="462.5" width="1.83333" height="17.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="97" name="japcz" class="Region2" x="2402" y="449.5" width="31.1667" height="12.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="93" name="japcz" class="Region2" x="2514" y="322.667" width="77.8333" height="36.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="japaneseIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="85" name="villagecz15" class="Region2" x="1285" y="101.167" width="23.3333" height="23.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="86" name="villagecz15" class="Region2" x="1036" y="2.16667" width="505.333" height="17.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="64" name="villagecz15" class="Region2" x="1503" y="258.5" width="40.3333" height="59.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="65" name="villagecz15" class="Region2" x="1479" y="286.5" width="21" height="29.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="66" name="villagecz15" class="Region2" x="1222.33" y="350.5" width="190.333" height="38.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="67" name="villagecz15" class="Region2" x="1223.67" y="390.5" width="88.3333" height="26.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="68" name="villagecz15" class="Region2" x="1122.33" y="321.167" width="60.3333" height="12.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="69" name="villagecz15" class="Region2" x="1153.67" y="336.5" width="28.3333" height="31.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="76" name="villagecz15" class="Region2" x="1179.67" y="257.5" width="4" height="61.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="77" name="villagecz15" class="Region2" x="1185.67" y="254.5" width="125.333" height="30.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="78" name="villagecz15" class="Region2" x="1313.67" y="225.5" width="127.333" height="41.1667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="79" name="villagecz15" class="Region2" x="1442.67" y="226.167" width="21.6667" height="23.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="126" name="villagecz15" class="Region2" x="1413.67" y="105.667" width="88.1667" height="29.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="127" name="villagecz15" class="Region2" x="1346.67" y="22.1667" width="59.1667" height="55">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="128" name="villagecz15" class="Region2" x="1063.17" y="21.1667" width="53.1667" height="47.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="129" name="villagecz15" class="Region2" x="1159.67" y="22.1667" width="51.1667" height="47.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="80" name="villagecz15" class="Region2" x="1313.67" y="221.833" width="188" height="4.16667">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="70" name="villagecz15" class="Region2" x="1123.67" y="417.5" width="28.6667" height="17.3333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="71" name="villagecz15" class="Region2" x="1027" y="417.5" width="28.6667" height="17.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="74" name="villagecz15" class="Region2" x="1026.67" y="353.167" width="28.6667" height="26.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="72" name="villagecz15" class="Region2" x="1121.33" y="383.167" width="2.33333" height="60.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="75" name="villagecz15" class="Region2" x="1150.33" y="383.167" width="2.33333" height="60.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="73" name="villagecz15" class="Region2" x="1056.67" y="352.167" width="2.33333" height="91.8333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="49" name="villagecz8" class="Region2" x="929" y="501.167" width="18.3333" height="8.83333">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="villageIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="12" name="islandcz3" class="Region2" x="355.5" y="321.5" width="28.5" height="60">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="13" name="islandcz4" class="Region2" x="375" y="1" width="9.5" height="318">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="14" name="islandcz5" class="Region2" x="311.5" y="1.5" width="8" height="127">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="15" name="islandcz6" class="Region2" x="288" y="82" width="22" height="46.5">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="16" name="islandcz7" class="Region2" x="276.5" y="96.5" width="11" height="128">
+   <properties>
+    <property name="animSpeed" type="int" value="0"/>
+    <property name="callbackID" type="int" value="0"/>
+    <property name="island" value="ghostIsland"/>
+    <property name="numFrames" type="int" value="0"/>
+    <property name="startingID" type="int" value="0"/>
+    <property name="textureHeight" type="int" value="0"/>
+    <property name="textureID" value="nil"/>
+    <property name="textureWidth" type="int" value="0"/>
    </properties>
   </object>
  </objectgroup>
@@ -13128,9 +14414,9 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="1889"/>
+   <tile gid="1698"/>
+   <tile gid="1700"/>
    <tile/>
    <tile/>
    <tile/>
@@ -13379,14 +14665,14 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="1850"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="4175"/>
    <tile/>
    <tile/>
    <tile/>
@@ -13460,18 +14746,18 @@
    <tile/>
    <tile/>
    <tile/>
+   <tile gid="1850"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="4174"/>
+   <tile gid="1948"/>
    <tile/>
    <tile/>
    <tile/>
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="4173"/>
    <tile/>
    <tile/>
    <tile/>
@@ -13618,8 +14904,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="3867"/>
+   <tile gid="3868"/>
    <tile/>
    <tile/>
    <tile/>
@@ -13703,8 +14989,8 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="3923"/>
+   <tile gid="3924"/>
    <tile/>
    <tile/>
    <tile/>
@@ -13809,10 +15095,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="741"/>
+   <tile gid="742"/>
+   <tile gid="742"/>
+   <tile gid="743"/>
    <tile/>
    <tile/>
    <tile/>
@@ -14149,10 +15435,10 @@
    <tile/>
    <tile/>
    <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
-   <tile/>
+   <tile gid="837"/>
+   <tile gid="742"/>
+   <tile gid="742"/>
+   <tile gid="839"/>
    <tile/>
    <tile/>
    <tile/>

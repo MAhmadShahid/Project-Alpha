@@ -10,6 +10,7 @@
 #include "LevelParser.h"
 #include "Enemy.h"
 #include "AnimatedTile.h"
+#include "Region2.h"
 const std::string PlayState::s_playID = "PLAY";
 
 
@@ -36,12 +37,14 @@ void PlayState::update()
 
 
 	pLevel->update();
+	player->update(checkPlayerCollision());
 }
 
 void PlayState ::render()
 {
 	//TextureManager::Instance()->drawFrame("tileset1", 0, 0, 1536, 736, 1, 0, 1, 1, Game::instance()->getRenderer());
 	pLevel->render();
+	player->draw();
 }
 
 bool PlayState::onEnter()
@@ -49,12 +52,32 @@ bool PlayState::onEnter()
 	GameObjectFactory::Instance()->registerType("Player", new PlayerCreator());
 	GameObjectFactory::Instance()->registerType("Enemy", new EnemyCreator());
 	GameObjectFactory::Instance()->registerType("AnimatedTile", new AnimatedTileCreator());
+	GameObjectFactory::Instance()->registerType("Region2", new Region2Creator());
 
 	LevelParser levelParser;
 	pLevel = levelParser.parseLevel("projectAlpha/Assets/mapPrototype.tmx");
+	player = pLevel->extractPlayerFromLayer();
 	std::cout << "Printing Layer Grid";
 	pLevel->printLayerGrid(6);
+	//std:cout << std::endl << "Collision Regions Info: ";
+	//CollisionManager::instance()->printStats("ghostIsland");
 	//pLevel->printTileSetStats(0);
+
+	SDL_Rect* ghostIsland = new SDL_Rect;
+	ghostIsland->x = 0; ghostIsland->y = 0; ghostIsland->w = 510; ghostIsland->h = 510;
+
+	SDL_Rect* playerRectangle = new SDL_Rect;
+	playerRectangle->x = player->getPosition().getX(); playerRectangle->y = player->getPosition().getY();
+	playerRectangle->w = player->getWidth(); playerRectangle->h = player->getHieght();
+
+	std::cout << std::endl <<"Player Position: x = " << playerRectangle->x << ", y = " << playerRectangle->y;
+	std::cout << std::endl << "Player Size: w = " << playerRectangle->w << ", h = " << playerRectangle->h;
+
+	if (SDL_HasIntersection(ghostIsland, playerRectangle) == SDL_TRUE)
+		std::cout << std::endl <<"They both intersect !";
+
+	//CollisionManager::instance()->printStats(CollisionManager::islands[0]);
+	
 
 
 	std::cout << std::endl <<"entering playstate" << std::endl;
@@ -73,4 +96,20 @@ bool PlayState::onExit()
 	playStateObjects.clear();
 
 	return true;
+}
+
+bool PlayState::checkPlayerCollision()
+{
+	Region2* futurePosition = new Region2;
+	futurePosition->setPosition(player->getPosition() + player->getVelocity());
+	futurePosition->setWidth(player->getWidth());
+	futurePosition->setHeight(player->getHieght());
+
+	std::cout << std::endl << "Future Position";
+	//futurePosition->printStats();
+	
+	bool collision = CollisionManager::instance()->isObjectColliding(futurePosition);
+	//std::cout << std::endl << collision;
+	return collision;
+	//return false;
 }

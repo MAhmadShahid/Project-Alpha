@@ -34,6 +34,35 @@ void Level::update()
 		m_layers[i]->update();
 }
 
+Player* Level::extractPlayerFromLayer()
+{
+	ObjectLayer* objectLayer;
+	Player* player = nullptr;
+	for (unsigned int i = 0; i < m_layers.size(); i++)
+	{
+		if (!dynamic_cast<ObjectLayer*>(m_layers[i]))
+			continue;
+
+		objectLayer = dynamic_cast<ObjectLayer*>(m_layers[i]);
+		std::vector<GameObject*>* gameObjects = objectLayer->getGameObjects();
+		vector<GameObject*>::iterator iter = gameObjects->begin();
+		
+		for (iter; iter != gameObjects->end(); iter++)
+		{
+			if (!dynamic_cast<Player*>(*iter))
+				continue;
+		
+			player = dynamic_cast<Player*>(*iter);
+			gameObjects->erase(iter);
+			break;
+		}
+
+		break;
+	}
+
+	return player;
+}
+
 void Level::printLayerGrid(int layerID)
 {
 	if (layerID >= m_layers.size())

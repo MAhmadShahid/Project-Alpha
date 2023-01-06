@@ -3,6 +3,7 @@
 #include "tinyxml.h"
 #include <iostream>
 #include <string>
+#include "CollisionManager.h"
 
 class LevelParser
 {
@@ -19,6 +20,9 @@ private:
 	//for object layers
 	void parseTextures(TiXmlElement* pTextureRoot);
 	void parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Layer*>* pLayers);
+	
+	//helping function
+	void parseCollisionZoneLayer(TiXmlElement* collisionZoneNode, CollisionManager* collisionManager, std::vector<Layer*>* pLayers);
 
 public:
 
