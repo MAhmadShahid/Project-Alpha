@@ -17,7 +17,7 @@ CollisionManager::CollisionManager()
 	m_collisionRegions[villageIsland] = std::vector<GameObject*>();
 	m_collisionRegions[japaneseIsland] = std::vector<GameObject*>();
 	m_collisionRegions[storeIsland] = std::vector<GameObject*>();
-	m_collisionRegions["end"] = std::vector<GameObject*>();
+	m_collisionRegions["sea"] = std::vector<GameObject*>();
 
 
 	//populate first vector value of each island with its bounded region
@@ -90,15 +90,15 @@ const std::string CollisionManager::returnIsland(GameObject* p_gameObject)
 		
 		//std::cout << std::endl << "Current Island: " << islands[i];
 		GameObject * currentIslandObject = m_collisionRegions[CollisionManager::islands[i]].front();
-		std::cout << std::endl << "Island Stats";
-		dynamic_cast<Region2*>(currentIslandObject)->printStats();
+		//std::cout << std::endl << "Island Stats";
+		//dynamic_cast<Region2*>(currentIslandObject)->printStats();
 		Region2::getGameObjectRectangle(currentIslandObject, &islandRectangle);
 		
 		if (SDL_HasIntersection(pGameObjectRectangle, &islandRectangle) == SDL_TRUE)
 		{
 			delete pGameObjectRectangle;
 			//delete islandRectangle;
-			std::cout << std::endl << "Current Island: " << islands[i];
+			//std::cout << std::endl << "Current Island: " << islands[i];
 			return islands[i];
 		}
 	}
@@ -111,7 +111,7 @@ const std::string CollisionManager::returnIsland(GameObject* p_gameObject)
 bool CollisionManager::isObjectColliding(GameObject* p_gameObject)
 {
 	const std::string islandToCheck = returnIsland(p_gameObject);
-	std::cout << std::endl << "Current Island: " << islandToCheck;
+	//std::cout << std::endl << "Current Island: " << islandToCheck;
 	
 	//create rectangle of the object to be checked
 	SDL_Rect* pGameObjectRectange = new SDL_Rect{0,0,0,0};
@@ -131,7 +131,7 @@ bool CollisionManager::isObjectColliding(GameObject* p_gameObject)
 		{
 			delete pGameObjectRectange;
 			delete islandRectangle;
-			std::cout << std::endl << "True";
+			//std::cout << std::endl << "True";
 			return true;
 		}
 	}

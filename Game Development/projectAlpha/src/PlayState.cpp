@@ -11,6 +11,7 @@
 #include "Enemy.h"
 #include "AnimatedTile.h"
 #include "Region2.h"
+#include "Camera.h"
 const std::string PlayState::s_playID = "PLAY";
 
 
@@ -76,6 +77,8 @@ bool PlayState::onEnter()
 	if (SDL_HasIntersection(ghostIsland, playerRectangle) == SDL_TRUE)
 		std::cout << std::endl <<"They both intersect !";
 
+	Camera::instance()->setTarget(player);
+
 	//CollisionManager::instance()->printStats(CollisionManager::islands[0]);
 	
 
@@ -105,7 +108,7 @@ bool PlayState::checkPlayerCollision()
 	futurePosition->setWidth(player->getWidth());
 	futurePosition->setHeight(player->getHieght());
 
-	std::cout << std::endl << "Future Position";
+	//std::cout << std::endl << "Future Position";
 	//futurePosition->printStats();
 	
 	bool collision = CollisionManager::instance()->isObjectColliding(futurePosition);

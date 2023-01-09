@@ -184,6 +184,7 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <ClCompile Include="projectAlpha\src\AnimatedGraphic.cpp" />
     <ClCompile Include="projectAlpha\src\AnimatedTile.cpp" />
     <ClCompile Include="projectAlpha\src\base64.cpp" />
+    <ClCompile Include="projectAlpha\src\Camera.cpp" />
     <ClCompile Include="projectAlpha\src\CollisionManger.cpp" />
     <ClCompile Include="projectAlpha\src\Enemy.cpp" />
     <ClCompile Include="projectAlpha\src\Game.cpp" />
@@ -216,6 +217,7 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <ClInclude Include="projectAlpha\src\AnimatedGraphic.h" />
     <ClInclude Include="projectAlpha\src\AnimatedTile.h" />
     <ClInclude Include="projectAlpha\src\base64.h" />
+    <ClInclude Include="projectAlpha\src\Camera.h" />
     <ClInclude Include="projectAlpha\src\CollisionManager.h" />
     <ClInclude Include="projectAlpha\src\Enemy.h" />
     <ClInclude Include="projectAlpha\src\gameObjectFactory.h" />
@@ -249,6 +251,7 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <ClInclude Include="projectAlpha\src\zlib.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="projectAlpha\Assets\ghost.png" />
     <Image Include="projectAlpha\Assets\ghostRight.bmp" />
     <Image Include="projectAlpha\Assets\chemicalExplosion.bmp" />
     <Image Include="projectAlpha\Assets\ghostRightFace.bmp" />
@@ -256,19 +259,33 @@ copy "$(SolutionDir)Dependancies\SDL2-2.24.2\lib\$(Platform)\SDL2.dll" "$(OutDir
     <Image Include="projectAlpha\Assets\GhostSpriteSheet.png" />
     <Image Include="projectAlpha\Assets\GUIItems\ExitButton.png" />
     <Image Include="projectAlpha\Assets\GUIItems\GameOver.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\GhostAdventureText.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\GhostAdventureText3.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\GhostAdventureText4.png" />
+    <Image Include="projectAlpha\Assets\GUIItems\globe.png" />
     <Image Include="projectAlpha\Assets\GUIItems\MainMenuButton.png" />
     <Image Include="projectAlpha\Assets\GUIItems\PlayButton.png" />
     <Image Include="projectAlpha\Assets\GUIItems\RestartButton.png" />
     <Image Include="projectAlpha\Assets\GUIItems\ResumeButton.png" />
+    <Image Include="projectAlpha\Assets\japan.png" />
     <Image Include="projectAlpha\Assets\player.png" />
+    <Image Include="projectAlpha\Assets\ShipSpriteSheet.png" />
+    <Image Include="projectAlpha\Assets\Slates v.2 [32x32px orthogonal tileset by Ivan Voirol].png" />
     <Image Include="projectAlpha\Assets\Slates [32x32px orthogonal tileset by Ivan Voirol].png" />
     <Image Include="projectAlpha\Assets\slatesHFlipped.png" />
+    <Image Include="projectAlpha\Assets\slatesRotatedR.png" />
     <Image Include="projectAlpha\Assets\spriteSheet.bmp" />
+    <Image Include="projectAlpha\Assets\traditional_japanese_buildings_tiles_by_peekychew_davhr2d.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="projectAlpha\Assets\japan.tsx" />
+    <None Include="projectAlpha\Assets\japaneseHouse.tsx" />
     <None Include="projectAlpha\Assets\mapPrototype.tmx" />
+    <None Include="projectAlpha\Assets\playerTemplate.tx" />
     <None Include="projectAlpha\Assets\slates.tsx" />
     <None Include="projectAlpha\Assets\SlatesHFlipped.tsx" />
+    <None Include="projectAlpha\Assets\slatesRotatedR.tsx" />
+    <None Include="projectAlpha\Assets\slatesv2.tsx" />
     <None Include="projectAlpha\src\libjpeg-9.dll" />
     <None Include="projectAlpha\src\libpng16-16.dll" />
     <None Include="projectAlpha\src\libtiff-5.dll" />
