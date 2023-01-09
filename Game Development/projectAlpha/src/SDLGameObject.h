@@ -43,6 +43,8 @@ public:
 	virtual int getCurrentFrame() const { return m_currentFrame; }
 	virtual void setPosition(Vector2D newPosition) { m_position = newPosition; }
 	virtual void setVelocity(Vector2D newVelocity) { m_velocity = newVelocity; }
+	virtual void setWidth(int width) { m_width = width; }
+	virtual void setHeight(int height) { m_height = height; }
 
 	virtual void load(const LoaderParams* pParams);
 

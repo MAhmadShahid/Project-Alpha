@@ -2,21 +2,29 @@
 #include <SDL.h>
 #include "Vector2D.h"
 #include "Player.h"
+#include "gameObjectFactory.h"
 
-class Region2
+class Region2 : public SDLGameObject
 {
-private:
-	SDL_Rect rectangle;
 
 public:
-	Region2(int m_x, int m_y, int m_width, int m_height);
-	Region2(Vector2D topLeftCorner, Vector2D bottomRightCorner);
-	Region2(Vector2D position, int width, int height);
+	Region2();
+	//Region2(int m_x, int m_y, int m_width, int m_height);
+	//Region2(Vector2D topLeftCorner, Vector2D bottomRightCorner);
+	//Region2(Vector2D playerPosition, int width, int height);
 
 	~Region2() {}
+	void load(const LoaderParams* pParams);
+	SDL_Rect * getRegionRectangle() const;
+	void printStats();
 
-	//static Region2 getPlayersRectangle(Player* playerObject);
-	bool isColliding(const Region2& firstRegion, const Region2& secondRegion);
-	bool isColliding(const Region2 * targetRegion);
-	const SDL_Rect * getRegionRectangle() const;
+	static void getGameObjectRectangle(const GameObject* p_gameObject, SDL_Rect* destinationRectangle);
+};
+
+class Region2Creator : public BaseCreator
+{
+	GameObject* createGameObject() const
+	{
+		return new Region2();
+	}
 };

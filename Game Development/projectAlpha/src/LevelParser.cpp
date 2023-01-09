@@ -262,6 +262,11 @@ void LevelParser::parseTextures(TiXmlElement* pTextureRoot)
 
 void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Layer*>* pLayers)
 {
+	if (pObjectElement->Attribute("name") == string("Collision Zones"))
+	{
+		parseCollisionZoneLayer(pObjectElement, CollisionManager::instance(), pLayers);
+		return;
+	}
 	cout << endl << "In parse object layer function" << endl;
 	//create an ObjectLayer object
 	ObjectLayer* pObjectLayer = new ObjectLayer();
@@ -340,6 +345,99 @@ void LevelParser::parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Lay
 		//testing/debugging
 		cout << endl;
 		pGameObject->printStats();
+
+
+	}
+
+	pLayers->push_back(pObjectLayer);
+}
+
+void LevelParser::parseCollisionZoneLayer(TiXmlElement* collisionZoneNode, CollisionManager* collisionManager, std::vector<Layer*>* pLayers)
+{
+	cout << endl << "In parse collision zone layer" << endl;
+	cout << endl << collisionZoneNode->FirstChildElement()->Value() << endl;
+
+	//create an ObjectLayer object
+	ObjectLayer* pObjectLayer = new ObjectLayer();
+	int x, y, width = 0, height = 0, numFrames = 0, textureHeight, textureWidth, callbackID = 0, animSpeed = 0, startingID = 0;
+	string name, textureID, island;
+
+	for (TiXmlElement* e = collisionZoneNode->FirstChildElement(); e != NULL; e = e->NextSiblingElement())
+	{
+		if (e->Value() != string("object"))
+			continue;
+
+		cout << endl << e->Value() << endl;
+
+		//local attributes variable
+
+
+		e->Attribute("x", &x);
+		e->Attribute("y", &y);
+		e->Attribute("width", &width);
+		e->Attribute("height", &height);
+		cout << width << " " << height;
+		//create Region2 Object
+		GameObject* pGameObject = GameObjectFactory::Instance()->create(e->Attribute("class"));
+
+		//get properties value
+		for (TiXmlElement* properties = e->FirstChildElement(); properties != NULL; properties = properties->NextSiblingElement())
+		{
+			if (properties->Value() == string("properties"))
+			{
+				for (TiXmlElement* property = properties->FirstChildElement(); property != NULL; property = property->NextSiblingElement())
+				{
+					if (property->Value() == string("property"))
+					{
+						if (property->Attribute("name") == std::string("numFrames"))
+						{
+							property->Attribute("value", &numFrames);
+						}
+						else if (property->Attribute("name") == std::string("island"))
+						{
+							island = property->Attribute("value");
+							cout << endl << "Stored Island : " << island << endl;
+						}
+						else if (property->Attribute("name") == std::string("textureHeight"))
+						{
+							property->Attribute("value", &textureHeight);
+						}
+						else if (property->Attribute("name") == std::string("textureID"))
+						{
+							textureID = property->Attribute("value");
+						}
+						else if (property->Attribute("name") == std::string("textureWidth"))
+						{
+							property->Attribute("value", &textureWidth);
+						}
+						else if (property->Attribute("name") == std::string("callbackID"))
+						{
+							property->Attribute("value", &callbackID);
+						}
+						else if (e->Attribute("name") == std::string("animSpeed"))
+						{
+							property->Attribute("value", &animSpeed);
+						}
+						else if (e->Attribute("name") == std::string("startingID"))
+						{
+							property->Attribute("value", &startingID);
+						}
+						
+					}
+				}
+			}
+		}
+
+		cout << " " << width << " " << height;
+		cout << "Island Name: " << island;
+		pGameObject->load(new LoaderParams(x, y, width, height, 0, 0, numFrames, textureID, callbackID, animSpeed, startingID));
+		pGameObject->printStats();
+
+		//add it to its respective island map
+		collisionManager->pushGameObject(island, pGameObject);
+
+		//add it to objectlayer
+		pObjectLayer->getGameObjects()->push_back(pGameObject);
 
 
 	}

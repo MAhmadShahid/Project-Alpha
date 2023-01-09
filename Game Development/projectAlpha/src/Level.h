@@ -3,6 +3,8 @@
 #include <vector>
 #include "Layer.h"
 #include "TileSet.h"
+#include "Player.h"
+#include "ObjectLayer.h"
 
 
 class Level
@@ -24,4 +26,5 @@ public:
 	std::vector<Layer*>* getLayers();
 	void printLayerGrid(int layerID);
 	void printTileSetStats(int tilesetID);
+	Player* extractPlayerFromLayer();
 };

@@ -18,7 +18,7 @@ class Player : public SDLGameObject
 public:
 	Player();
 	virtual void draw();
-	virtual void update();
+	virtual void update(bool collisionOccurs);
 	virtual void clean();
 
 	virtual void load(const LoaderParams* pParams);

@@ -23,7 +23,7 @@ void Player::draw()
 	SDLGameObject::draw();
 }
 
-void Player::update()
+void Player::update(bool collisionOccurs)
 {
 	//Left and right click to move the player sprite in that direction
 	/*if (InputHandler::instance()->getMouseButtonState(LEFT))
@@ -47,20 +47,15 @@ void Player::update()
 	bool inValidHeightRange = ((int)m_position.getY() <= windowHeight - 39) && ((int)m_position.getY() >= 0);
 
 	//std::cout << std::endl << "Checking for collision" << std::endl;
-	vector<Region2> collisionRegion;
-	collisionRegion.push_back(Region2(7, 224, 214, 62));
-	Vector2D futurePosition = m_position + m_velocity;
-	Region2 futureRegion (futurePosition, m_width, m_height);
+	//vector<Region2> collisionRegion;
+	//collisionRegion.push_back(Region2(7, 224, 214, 62));
+	//Vector2D futurePosition = m_position + m_velocity;
+	//Region2 futureRegion (futurePosition, m_width, m_height);
 	
 	//std::cout << "Players Future Region: X = " << futureRegion.getRegionRectangle()->x << ", Y = " << futureRegion.getRegionRectangle()->y << std::endl;
-	bool collisionOccurs = false;
+	//collisionOccurs = false;
 	
-	for (int i = 0; i < collisionRegion.size(); i++)
-	{
-		//std::cout << "Collision Region: X = " << futureRegion.getRegionRectangle()->x << ", Y = " << futureRegion.getRegionRectangle()->y << std::endl;
-		if (collisionRegion[i].isColliding(&futureRegion))
-			collisionOccurs = collisionOccurs || true;
-	}
+
 
 	if (inValidWidthRange && inValidHeightRange && ! collisionOccurs)
 	{

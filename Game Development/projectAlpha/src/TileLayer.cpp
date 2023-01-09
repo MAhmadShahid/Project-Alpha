@@ -50,8 +50,10 @@ TileSet TileLayer::getTileSetByID(int tileID)
 
 void TileLayer::update()
 {
-	m_position += m_velocity;
-	//m_velocity.setX(1);
+	/*m_velocity.setX(2);
+	
+	if( m_position.getX() <= 1431)
+		m_position += m_velocity;*/
 }
 
 void TileLayer::render()
