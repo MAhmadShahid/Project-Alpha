@@ -1,16 +1,18 @@
 #include "TileLayer.h"
 #include "Game.h"
+#include "Camera.h"
 
-TileLayer::TileLayer(int tileSize, const std::vector<TileSet>& tilesets) : m_tileSize(tileSize), m_tilesets(tilesets)
+
+TileLayer::TileLayer(int tileSize, int mapWidth, int mapHeight,int scaleAmount, const std::vector<TileSet>& tilesets) : m_tileSize(tileSize), m_tilesets(tilesets), additiveScale(scaleAmount)
 {
 	m_numColumns = Game::instance()->getGameWidth() / (m_tileSize + additiveScale);
 	m_numRows = Game::instance()->getGameHeight() / (m_tileSize + additiveScale);
-}
 
-TileLayer::TileLayer(int tileSize, int scaleAmount, const std::vector<TileSet>& tilesets) : m_tileSize(tileSize), m_tilesets(tilesets), additiveScale(scaleAmount)
-{
-	m_numColumns = Game::instance()->getGameWidth() / (m_tileSize + additiveScale);
-	m_numRows = Game::instance()->getGameHeight() / (m_tileSize + additiveScale);
+	//m_numColumns = mapWidth;
+	//m_numRows = mapHeight;
+
+	m_mapWidth = mapWidth;
+	
 }
 
 TileLayer::~TileLayer()
@@ -50,10 +52,7 @@ TileSet TileLayer::getTileSetByID(int tileID)
 
 void TileLayer::update()
 {
-	/*m_velocity.setX(2);
-	
-	if( m_position.getX() <= 1431)
-		m_position += m_velocity;*/
+	m_position.setX( Camera::instance()->getPosition().getX());
 }
 
 void TileLayer::render()
@@ -74,6 +73,13 @@ void TileLayer::render()
 			{
 				continue;
 			}
+
+			//// if tile outside the viewable area, skip it
+			//if (((j * m_tileSize) - x2) - Camera::instance()->getPosition().getX() < -m_tileSize || ((j * m_tileSize) - x2)
+			//	- Camera::instance()->getPosition().getX() > Game::instance()->getGameWidth())
+			//{
+			//	continue;
+			//}
 			
 			TileSet tileset = getTileSetByID(id);
 			id--;
@@ -81,6 +87,12 @@ void TileLayer::render()
 			TextureManager::Instance()->drawTile(tileset.name, tileset.margin, tileset.spacing, (j * (m_tileSize + additiveScale)) - x2, 
 				(i * (m_tileSize + additiveScale)) - y2, m_tileSize, m_tileSize, (id - (tileset.firstGridID - 1)) / tileset.numColumns, 
 				(id - (tileset.firstGridID - 1)) % tileset.numColumns, additiveScale,Game::instance()->getRenderer());
+
+			//// draw the tile into position while offsetting its x position by
+			//// subtracting the camera position
+			//TextureManager::Instance()->drawTile(tileset.name, tileset.margin, tileset.spacing, ((j * m_tileSize) - x2) - Camera::instance()->getPosition().getX(),
+			//	((i * m_tileSize) - y2), m_tileSize, m_tileSize, (id - (tileset.firstGridID - 1)) / tileset.numColumns,
+			//	(id - (tileset.firstGridID - 1))% tileset.numColumns, additiveScale,Game::instance()->getRenderer());
 		}
 	}
 }

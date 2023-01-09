@@ -13,6 +13,7 @@ private:
 	int m_numColumns;
 	int m_numRows;
 	int m_tileSize;
+	int m_mapWidth;
 
 	int additiveScale = 0;
 
@@ -24,8 +25,8 @@ private:
 
 public:
 
-	TileLayer(int tileSize, const std::vector<TileSet> &tilesets);
-	TileLayer(int tileSize, int additiveScale,const std::vector<TileSet>& tilesets);
+	/*TileLayer(int tileSize, const std::vector<TileSet> &tilesets);*/
+	TileLayer(int tileSize, int mapHeight, int mapWidth, int additiveScale, const std::vector<TileSet>& tilesets);
 	~TileLayer();
 
 	virtual void update();

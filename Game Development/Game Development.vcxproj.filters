@@ -105,6 +105,9 @@
     <ClCompile Include="projectAlpha\src\CollisionManger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="projectAlpha\src\Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="projectAlpha\src\Game.h">
@@ -212,6 +215,9 @@
     <ClInclude Include="projectAlpha\src\CollisionManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="projectAlpha\src\Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="projectAlpha\Assets\ghostRight.bmp">
@@ -259,6 +265,36 @@
     <Image Include="projectAlpha\Assets\GhostSpriteSheet.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\GhostAdventureText.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\ghost.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\japan.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\ShipSpriteSheet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\Slates v.2 [32x32px orthogonal tileset by Ivan Voirol].png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\slatesRotatedR.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\traditional_japanese_buildings_tiles_by_peekychew_davhr2d.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\GhostAdventureText3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\GhostAdventureText4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="projectAlpha\Assets\GUIItems\globe.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="projectAlpha\src\zlib1.dll" />
@@ -270,6 +306,11 @@
     <None Include="projectAlpha\Assets\slates.tsx" />
     <None Include="projectAlpha\Assets\mapPrototype.tmx" />
     <None Include="projectAlpha\Assets\SlatesHFlipped.tsx" />
+    <None Include="projectAlpha\Assets\japan.tsx" />
+    <None Include="projectAlpha\Assets\japaneseHouse.tsx" />
+    <None Include="projectAlpha\Assets\playerTemplate.tx" />
+    <None Include="projectAlpha\Assets\slatesRotatedR.tsx" />
+    <None Include="projectAlpha\Assets\slatesv2.tsx" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="projectAlpha\src\test.xml" />

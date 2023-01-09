@@ -121,7 +121,7 @@ void LevelParser::parseTileSets(TiXmlElement* pTileSetRoot, std::vector<TileSet>
 
 void LevelParser::parseTileLayer(TiXmlElement* pTileElement, std::vector<Layer*>* pLayers, const std::vector<TileSet>* pTileSets)
 {
-	TileLayer* pTileLayer = new TileLayer(m_tileSize, 0,*pTileSets);
+	TileLayer* pTileLayer = new TileLayer(m_tileSize, m_width, m_height, 0,*pTileSets);
 	// tile data
 	std::vector<std::vector<int>> data;
 	std::string decodedIDs;
